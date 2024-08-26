@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class HttpService {
 
   constructor(private http:HttpClient) { }
-  baseurl='https://bookstore.incubation.bridgelabz.com';
+  baseurl='https://bookstore.incubation.bridgelabz.com/bookstore_user';
 
   getService=(url:any)=>{
     return this.http.get(this.baseurl+url);
