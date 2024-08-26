@@ -1,0 +1,42 @@
+.mycart-container {
+    margin-left: 17%;
+    
+}
+.image {
+    width: 100px;
+    height: 135px;
+}
+.mycart {
+    width: 774px;
+    height: 265px;
+    background: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 1px;
+    //opacity: 0.24;
+}
+.mycart1 {
+    margin: 2% 2%;
+}
+.dropbtn {
+    width: 250px;
+    height: 40px;
+    border: 1px solid #DCDCDC;
+    border-radius: 1px;
+    opacity: 1;
+    margin-top: 12px;
+    margin-right: 25px;
+}
+.btn {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #DCDCDC;
+}
+.item {
+    display: flex;
+    width: 41px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #DCDCDC;
+    border-radius: 3px;
+}
