@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.book-details {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+
+    .small-image-left {
+        display: flex;
+        flex-direction: column;
+        width: 44px;
+        height: 100px;
+
+        .small-image-div {
+            width: 44px;
+            height: 54px;
+            border: 1px solid #D1D1D1;
+            text-align: center;
+            margin: 0.5px;
+            img {
+                width: 35px;
+                height: 44.71px;
+                margin-top: 3px;
+                
+            }
+        }
+    }
+
+    .large-image-div {
+        margin-left: 0.1%;
+        .large-image{
+            height: 413px;
+            width: 361px;
+            border: 1px solid #D1D1D1;
+            img{
+                margin-left: 11.5%;
+                margin-top: 6%;
+            }
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5%;
+            :first-child{
+                background-color: #A03037;
+            }
+            :last-child{
+                background-color: #333333;
+            }
+            *{
+                width: 40%;
+                color: #FFFFFF;
+                border-radius: 1px;
+            }
+        }
+    }
+    
+}
+
+.right-content{
+    margin-left: 5%;
+    margin-right: 10%;
+    .right-content-top{
+        border-bottom: 1px solid #9D9D9D;
+    }
+}
+.rating-discount{
+    display: flex;
+    align-items: center;
+    .rating{
+        display: flex;
+        align-items: center;
+        background-color: #388E3C;
+        color: #FFFFFF;
+        width: 10%;
+        justify-content: center;
+        *{
+            margin-top: 1%;
+            margin-bottom: 2%;
+        }
+    }
+}
+.price{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    :first-child{
+        font-size: medium;
+        font-size: 30px;
+        line-height: 39px;
+        font-family: Roboto;
+        margin-right: 3%;
+    }
+    :last-child{
+        text-decoration: dashed;
+    }
+}
+
+.right-content-center{
+    margin-top: 5%;
+    border-bottom: 1px solid #9D9D9D;
+    margin-bottom: 4%;
+    padding-bottom: 2%;
+}
+.feedback{
+    background-color: #F5F5F5;
+}

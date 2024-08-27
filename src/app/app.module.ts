@@ -8,7 +8,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NavbarComponent } from './dashboard/navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 import {MatIconModule} from '@angular/material/icon';
