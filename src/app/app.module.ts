@@ -19,7 +19,6 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { OrderContainerComponent } from './components/order-container/order-container.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
 
 @NgModule({
@@ -29,7 +28,6 @@ import { MyorderComponent } from './components/myorder/myorder.component';
     DashboardComponent,
     MycartComponent,
     NavbarComponent,
-    OrderContainerComponent,
     MyorderComponent
   ],
   imports: [
