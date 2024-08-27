@@ -20,6 +20,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MyorderComponent } from './components/myorder/myorder.component';
+
+
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
 
 
@@ -31,6 +34,7 @@ import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.compo
     MycartComponent,
     NavbarComponent,
     MyorderComponent,
+    WishlistComponent,
     PleaseloginComponent
   ],
   imports: [
