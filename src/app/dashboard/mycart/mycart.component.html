@@ -10,14 +10,14 @@
         </div>
         <div style="display: flex; margin-left: 2%; height: 47%;">
             <div class="image">
-                <img src="../../../assets/Image 7.png" alt="" style="height: 100%;">
+                <img src="../../../assets/Image 11.png" alt="" style="height: 100%;">
             </div>
             <div class="details">
                 <h4 style="font-weight: 500;">Don't Make Me Think</h4>
                 <p style="font-size: 14px; color: #9D9D9D;">by Steve Krug</p>
                 <p style="font-size: 14px; font-weight: 500;">Rs. 1500 <span style="color: #9D9D9D; font-size: 10px; margin-left: 2px;"><s>Rs.2000</s></span></p>
                 <div style="display: flex; justify-content: space-between; width: 50%;">
-                    <div style="display: flex; gap: 10px;">
+                    <div style="display: flex; gap: 10px; ">
                         <button class="btn">-</button>
                         <div class = "item"><span>1</span></div>
                         <button class="btn">+</button>
@@ -28,13 +28,16 @@
                 </div>
             </div>
         </div>
-        <div style="display: flex; justify-content: end; margin-right: 30px; margin-bottom: 2px;">
-            <button class = "btn" style="background-color: #3371B5; color: white; width: 151px; height: 35px; border-radius: 2px;">PLACE ORDER</button>
+        <div style="display: flex; justify-content: end; margin-right: 30px; margin-bottom: 2px;" *ngIf="!isFormContainerVisible">
+            <button class = "btn" style="background-color: #3371B5; color: white; width: 151px; height: 35px; border-radius: 2px; cursor: pointer;" (click)="formFunction()">PLACE ORDER</button>
         </div>
     </div>
 </div>
+<div class="address-details" *ngIf="!isFormContainerVisible">
+    <h3 style="color: #9D9D9D; margin-bottom: 0%;">Address Details</h3>
+</div>
 <div>
-    <div class="form-container">
+    <div class="form-container" *ngIf="isFormContainerVisible">
         <div style="display: flex; justify-content: space-between;">
             <div>
                 <h2>Customer Details</h2>
@@ -84,12 +87,15 @@
                 </div>
             </div>
         </div>
-        <div class="buttons">
-            <button class = "continue">CONTINUE</button>
+        <div class="buttons" *ngIf="!isOrderSummaryVisible">
+            <button class = "continue" (click)="orderFunction()">CONTINUE</button>
         </div>
     </div>
 </div>
-<div class="order-summary">
+<div class="order-details" *ngIf="!isOrderSummaryVisible">
+    <h3 style="color: #9D9D9D; margin-bottom: 0%;">Order summery</h3>
+</div>
+<div class="order-summary" *ngIf="isOrderSummaryVisible">
     <div class="mycart">
         <div style="display: flex; justify-content: space-between;">
             <div class="mycart1">
@@ -98,7 +104,7 @@
         </div>
         <div style="display: flex; margin-left: 2%; height: 47%;">
             <div class="image">
-                <img src="../../../assets/Image 7.png" alt="" style="height: 100%;">
+                <img src="../../../assets/Image 11.png" alt="" style="height: 100%;">
             </div>
             <div class="details">
                 <h4 style="font-weight: 500;">Don't Make Me Think</h4>
