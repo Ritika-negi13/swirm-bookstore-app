@@ -25,7 +25,7 @@
                     <p>4.5</p>
                     <p><mat-icon style="width: 20px;height: 20px;">star</mat-icon></p>
                 </div>
-                <p style="margin-top: 2%; margin-left: 2%;">(20)</p>
+                <p style="margin-top: 2%; margin-left: 2%; color: #878787;">(20)</p>
             </div>
             <div class="price">
                 <p>Rs.1500</p>
@@ -39,13 +39,11 @@
         <div class="right-content-bottom">
             <p style="font: normal normal normal 18px/24px Roboto">Customer Feedback</p>
             <div class="feedback">
-                <p>Overall rating</p>
+                <p class="overall_rating">Overall rating</p>
                 <div class="stars">
                     <mat-icon *ngFor="let i of [1,2,3,4,5]">star_outline</mat-icon>
                 </div>
-                <mat-form-field>
-                    <textarea matInput placeholder="Write your review"></textarea>
-                </mat-form-field>
+                <textarea placeholder="Write your review"></textarea>
                 <button mat-raised-button>Submit</button>
             </div>
             <div class="reviews">
