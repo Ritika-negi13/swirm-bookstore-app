@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { ProfileComponent } from './components/profile/profile.component';
+
+
 import { MycartComponent } from './components/mycart/mycart.component';
-import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 const routes: Routes = [
   {
@@ -18,10 +19,6 @@ const routes: Routes = [
     path: 'mycart',
     component: MycartComponent,
   },
-  {
-    path:'wishlist',
-    component:WishlistComponent
-  }
 ];
 
 @NgModule({
