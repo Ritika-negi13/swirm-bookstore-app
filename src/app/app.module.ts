@@ -20,6 +20,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MyorderComponent } from './components/myorder/myorder.component';
+import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { MyorderComponent } from './components/myorder/myorder.component';
     DashboardComponent,
     MycartComponent,
     NavbarComponent,
-    MyorderComponent
+    MyorderComponent,
+    PleaseloginComponent
   ],
   imports: [
     BrowserModule,
