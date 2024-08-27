@@ -9,6 +9,6 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   constructor(private router:Router){}
   openProfile(){
-    this.router.navigate(['/profile']);
+    this.router.navigate(['/dashboard/profile']);
   }
 }
