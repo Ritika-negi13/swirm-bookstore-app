@@ -36,7 +36,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatToolbarModule,
     MatFormFieldModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
