@@ -19,6 +19,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { BookcardComponent } from './components/bookcard/bookcard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     BookDetailsComponent,
     DashboardComponent,
     MycartComponent,
-    NavbarComponent
+    NavbarComponent,
+    BookcardComponent
   ],
   imports: [
     BrowserModule,
