@@ -19,12 +19,12 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
-<<<<<<< HEAD
+import { MyorderComponent } from './components/myorder/myorder.component';
+
+
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-=======
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
 
->>>>>>> bdbf59ffff7199ca1ca7a399cbcb9afb4e297c16
 
 @NgModule({
   declarations: [
@@ -33,11 +33,9 @@ import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.compo
     DashboardComponent,
     MycartComponent,
     NavbarComponent,
-<<<<<<< HEAD
-    WishlistComponent
-=======
+    MyorderComponent,
+    WishlistComponent,
     PleaseloginComponent
->>>>>>> bdbf59ffff7199ca1ca7a399cbcb9afb4e297c16
   ],
   imports: [
     BrowserModule,
