@@ -5,7 +5,6 @@ import { ProfileComponent } from './components/profile/profile.component';
 
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-
 import { MycartComponent } from './components/mycart/mycart.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
@@ -14,8 +13,10 @@ import { LoginsignupComponent } from './components/loginsignup/loginsignup.compo
 
 
 const routes: Routes = [
+  // {path : '', component : DashboardComponent, children :[{path:'',component : BookcardComponent}]},
+
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardComponent,
     children: [
       { path: "", component: BookcardComponent },
@@ -26,10 +27,6 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent,
-      },
-      {
-        path: 'mycart',
-        component: MycartComponent,
       },
       {
         path: 'pleaselogin',

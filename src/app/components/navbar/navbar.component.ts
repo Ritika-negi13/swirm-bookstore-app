@@ -8,8 +8,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(private router:Router){}
-  openProfile(){
-    this.router.navigate(['/dashboard/profile']);
+  constructor(private router: Router) { }
+  isLoggedIn=true;
+  showdialog = false;
+  openwishlist() {
+    this.router.navigate(['/wishlist']);
+    this.showdialog=false;
+  }
+  openorders() {
+    this.router.navigate(['/myorder']);
+    this.showdialog=false;
+  }
+  
+  toggle() {
+    this.showdialog = !this.showdialog;
+  }
+  openProfile = () => {
+    this.router.navigate(['/profile']);
+    this.showdialog = false;
+  }
+
+  logout=()=>{
+
   }
 }
