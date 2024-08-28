@@ -9,7 +9,7 @@
     </mat-form-field>
 </div>
 <div class="bookcard">
-    <div class="book" *ngFor="let book of filterBookList">
+    <div class="book" *ngFor="let book of filterBookList" [routerLink]="['/dashboard/bookdetail']">
         <div class="book_image">
             <img src={{book.imgPath}} alt="bookImage">
             <div class="outofstock" *ngIf="book.quantity === 0">

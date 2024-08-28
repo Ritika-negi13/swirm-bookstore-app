@@ -9,14 +9,15 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MycartComponent } from './components/mycart/mycart.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
 const routes: Routes = [
   {
-    path:'dashboard',
-    component:DashboardComponent,
-    children:[
-      {path : "", component : BookcardComponent},
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      { path: "", component: BookcardComponent },
       {
         path: 'bookDetails',
         component: BookDetailsComponent,
@@ -30,12 +31,16 @@ const routes: Routes = [
         component: MycartComponent,
       },
       {
-        path:'pleaselogin',
-        component:PleaseloginComponent
-      }
+        path: 'pleaselogin',
+        component: PleaseloginComponent
+      },
+      { path: 'wishlist', component: WishlistComponent },
+      { path: 'cart', component: MycartComponent },
+      {path : 'bookdetail', component : BookDetailsComponent},
+      {path : 'myorder', component : MyorderComponent}
     ]
   }
-]; 
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
