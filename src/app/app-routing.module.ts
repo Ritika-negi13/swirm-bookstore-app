@@ -8,7 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { MycartComponent } from './components/mycart/mycart.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
-import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { BookcardComponent } from './components/bookcard/bookcard.component';
 
 
 const routes: Routes = [
@@ -16,6 +16,7 @@ const routes: Routes = [
     path:'dashboard',
     component:DashboardComponent,
     children:[
+      {path : "", component : BookcardComponent},
       {
         path: 'bookDetails',
         component: BookDetailsComponent,
