@@ -9,7 +9,7 @@
     </mat-form-field>
 </div>
 <div class="bookcard">
-    <div class="book" *ngFor="let book of filterBookList" [routerLink]="['/dashboard/bookdetail']">
+    <div class="book" *ngFor="let book of paginationBook" [routerLink]="['/dashboard/bookdetail']">
         <div (click)="getId(book._id)">
             <div class="book_image">
                 <img src={{book.imgPath}} alt="bookImage">
@@ -34,5 +34,13 @@
                 </h2>
             </div>
         </div>
+    </div>
+    <!-- pagination  -->
+    <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPageno === 1" class="navinagtionBtn"> < </button>
+        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 1}">1</span>
+        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 2}">2</span>
+        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 3}">3</span>
+        <button (click)="nextPage()" [disabled]="currentPageno === totalPage" class="navinagtionBtn"> > </button>
     </div>
 </div>
