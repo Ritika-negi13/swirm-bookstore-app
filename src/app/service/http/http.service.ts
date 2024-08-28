@@ -9,6 +9,11 @@ export class HttpService {
   constructor(private http:HttpClient) { }
   baseurl='https://bookstore.incubation.bridgelabz.com/bookstore_user';
 
+  // login for admin
+  adminlogin=(url:any,data:any)=>{
+    return this.http.post(this.baseurl+url,data)
+  }
+
   getService=(url:any,token:Boolean,headers:any)=>{
     return this.http.get(this.baseurl+url,token&&headers);
   }
@@ -19,5 +24,8 @@ export class HttpService {
 
   postService=(url:any,data:any,token:boolean,headers:any)=>{
     return this.http.post(this.baseurl+url,data,token&&headers);
+  }
+  userlogin=(url:any,data:any)=>{
+    return this.http.post(this.baseurl+url,data)
   }
 }
