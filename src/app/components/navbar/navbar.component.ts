@@ -9,8 +9,18 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   constructor(private router: Router) { }
-  isLoggedIn=true;
+  isLoggedIn=false;
   showdialog = false;
+  ngOnInit(){
+    console.log(localStorage.getItem("acesstoken"))
+    if(localStorage.getItem("acesstoken"))
+    {
+      this.isLoggedIn=true;
+      console.log(this.isLoggedIn);
+    }
+    else
+      this.isLoggedIn=false;
+  }
   openwishlist() {
     this.router.navigate(['/wishlist']);
     this.showdialog=false;
@@ -29,6 +39,7 @@ export class NavbarComponent {
   }
 
   logout=()=>{
-
+    localStorage.removeItem("acesstoken");
+    window.location.reload();
   }
 }
