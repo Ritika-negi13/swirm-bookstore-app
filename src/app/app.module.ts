@@ -26,6 +26,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
 
 import { BookcardComponent } from './components/bookcard/bookcard.component';
+import { OrderPlacedComponent } from './order-placed/order-placed.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BookcardComponent } from './components/bookcard/bookcard.component';
     MyorderComponent,
     WishlistComponent,
     PleaseloginComponent,
-    BookcardComponent
+    BookcardComponent,
+    OrderPlacedComponent
   ],
   imports: [
     BrowserModule,
