@@ -5,7 +5,22 @@
                 <h3 style="font-weight: 500; font-size: 18px;">My cart (1)</h3>
             </div>
             <div class="location">
-                <button class="dropbtn" onclick="myFunction()">Use current location</button>
+                <!-- <button class="dropbtn" onclick="myFunction()"> 
+                    <div>
+                        <img src="../../../assets/map.svg" alt="">
+                    </div>
+                    <div style="margin-top: 2px; font-weight: 500; font-size: 14px;">
+                        Use current location
+                    </div>
+                </button> -->
+                <button class="btn-none dropdown-toggle custom-align dropbtn" type="button" data-toggle="dropdown" required>
+                    <div>
+                        <img src="../../../assets/map.svg" alt="">
+                    </div>
+                    <div style="margin-top: 2px; font-weight: 500; font-size: 14px;">
+                        Use current location
+                    </div>
+                </button>
             </div>
         </div>
         <div style="display: flex; margin-left: 2%; height: 47%;">
@@ -18,9 +33,9 @@
                 <p style="font-size: 14px; font-weight: 500;">Rs. 1500 <span style="color: #9D9D9D; font-size: 10px; margin-left: 2px;"><s>Rs.2000</s></span></p>
                 <div style="display: flex; justify-content: space-between; width: 50%;">
                     <div style="display: flex; gap: 10px; ">
-                        <button class="btn">-</button>
-                        <div class = "item"><span>1</span></div>
-                        <button class="btn">+</button>
+                        <button class="btn" (click)="decValue()" [disabled]="cartValue === 1" >–</button>
+                        <div class = "item"><span>{{cartValue}}</span></div>
+                        <button class="btn" (click)="incValue()"><img src="../../../assets/plus.svg" alt=""></button>
                     </div>
                     <div>
                         <div style="margin-left: 24px;font-size: 13px; font-weight: 500;">Remove</div>
@@ -34,7 +49,7 @@
     </div>
 </div>
 <div class="address-details" *ngIf="!isFormContainerVisible">
-    <h3 style="color: #9D9D9D; margin-bottom: 0%;">Address Details</h3>
+    <h3 style="color: #333232; margin-bottom: 0%;">Address Details</h3>
 </div>
 <div>
     <div class="form-container" *ngIf="isFormContainerVisible">
@@ -93,7 +108,7 @@
     </div>
 </div>
 <div class="order-details" *ngIf="!isOrderSummaryVisible">
-    <h3 style="color: #9D9D9D; margin-bottom: 0%;">Order summery</h3>
+    <h3 style="color: #333232; margin-bottom: 0%;">Order summery</h3>
 </div>
 <div class="order-summary" *ngIf="isOrderSummaryVisible">
     <div class="mycart">
