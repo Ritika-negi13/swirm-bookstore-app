@@ -20,7 +20,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MyorderComponent } from './components/myorder/myorder.component';
-import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
+import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component'; 
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.compo
     MycartComponent,
     NavbarComponent,
     MyorderComponent,
-    PleaseloginComponent
+    PleaseloginComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
