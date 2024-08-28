@@ -1,0 +1,86 @@
+.wishlist {
+    border: 1px solid #E4E4E4;
+    width: 900px;
+    margin-top: 3%;
+    margin-left: auto;
+    height: auto;
+    margin-right: auto;
+
+    .my-wishlist {
+        display: flex;
+        background-color: #F5F5F5;
+        border: 1px solid #E4E4E4;
+        color: #0A0102;
+        height: 55px;
+        font: bold normal medium 18px/24px Roboto;
+        font-weight: bold;
+        font-size: medium;
+        align-items: center;
+
+        :first-child {
+            margin-left: 5%;
+        }
+
+        .p02 {
+            margin-left: 1%;
+        }
+    }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlist-card {
+    display: flex;
+    height: auto;
+    flex-direction: row;
+
+    mat-icon {
+        cursor: pointer;
+        margin-top: 5%;
+        margin-left: 5%;
+        color: #9D9D9D;
+    }
+
+    img {
+        width: 65px;
+        height: 85px;
+        margin: 4%;
+    }
+
+    border-bottom: 2px solid #E4E4E4;
+
+    .card-content {
+        margin-top: 4%;
+        width: 70%;
+        height: 100%;
+        .card-title {
+            font: normal normal normal 18px/24px Roboto;
+            color: #0A0102;
+        }
+
+        .card-author {
+            font: normal normal normal 12px/16px Roboto;
+            color: #9D9D9D;
+        }
+
+        .card-price {
+            font: normal normal bold 15px/20px Roboto;
+            color: #0A0102;
+        }
+
+        .card-discount {
+            font: normal normal normal 12px/16px Roboto;
+            color: #9D9D9D;
+            margin-left: 5%;
+            margin-top: 0.3%;
+        }
+
+    }
+}
+
+.price {
+    display: flex;
+}
