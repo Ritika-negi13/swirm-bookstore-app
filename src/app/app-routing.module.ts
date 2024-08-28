@@ -7,6 +7,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { MycartComponent } from './components/mycart/mycart.component';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginsignupComponent } from './components/loginsignup/loginsignup.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
         component:PleaseloginComponent
       }
     ]
+  },
+  {
+    path:'loginsignup',
+    component:LoginsignupComponent
   }
 ]; 
 @NgModule({

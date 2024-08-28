@@ -19,8 +19,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
-
+import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
+import { LoginsignupComponent } from './components/loginsignup/loginsignup.component'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.compo
     DashboardComponent,
     MycartComponent,
     NavbarComponent,
-    PleaseloginComponent
+    PleaseloginComponent,
+    LoginsignupComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.compo
     MatFormFieldModule,
     MaterialModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,74 @@
+<div class="main">
+    <mat-card style="width:33%;height:33%;">
+        <img src="../../../assets/2766594@2x.png">
+        <p style="font-size: 16px;">ONLINE BOOK SHOPPING</p>
+    </mat-card>
+    <mat-card class="lsbox">
+        <div class="box">
+            <div class="toggle">
+                <div>
+                    <p class="active">LOGIN</p>
+                    <div></div>
+                </div>
+                <div>
+                    <p class="active">SIGNUP</p>
+                    <div></div>
+                </div>   
+            </div>
+            <div class="loginform">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form">
+                        <mat-form-field>
+                            <label>Email Id</label>
+                            <br>
+                            <input  type="text" >
+                        </mat-form-field>
+                        <mat-form-field>
+                            <label>Password</label>
+                            <br>
+                            <input matInput type="password">
+                        </mat-form-field>
+                        <p style="font-size: 14px;font-weight: 400;color: grey;margin-right: 4%;text-align: end;">Forgot Password?</p>
+                    </div>
+                    <button class="submit" type="submit" [disabled]="!loginForm.valid">Login</button>
+                </form>
+                <div>
+                    <div></div>
+                    <p class="active">OR</p>
+                    <div></div>
+                </div>
+                <div class="buttons">
+                    <button id="Facebook">Facebook</button>
+                    <button id="Google">Google</button>
+                </div>
+            </div>
+            <div style="display: none;">
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                    <div class="form">
+                        <mat-form-field>
+                        <label>Full Name</label>
+                        <br>
+                        <input type="text">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <label>Email Id</label>
+                        <br>
+                        <input type="text">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <label>Password</label>
+                        <br>
+                        <input type="password">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <label>Mobile Number</label>
+                        <br>
+                        <input type="text">
+                    </mat-form-field>
+                    </div>
+                    <button class="submit" type="submit" [disabled]="!signupForm.valid">Signup</button>
+                </form>
+            </div>
+        </div>
+    </mat-card>
+</div>
