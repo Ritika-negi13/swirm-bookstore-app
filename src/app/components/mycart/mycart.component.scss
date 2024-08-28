@@ -57,12 +57,29 @@
     opacity: 1;
     margin-top: 12px;
     margin-right: 25px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    background-color: #FFFFFF;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 3.255em;
+    vertical-align: .255em;
+    content: "";
+    color: #DCDCDC;
+    border-top: 11px solid;
+    border-right: 9px solid transparent;
+    border-bottom: 0;
+    border-left: 9.5px solid transparent;
 }
 .btn {
     border-radius: 50%;
     width: 24px;
     height: 24px;
     border: 1px solid #DCDCDC;
+    font-weight: 700;
 }
 .item {
     display: flex;

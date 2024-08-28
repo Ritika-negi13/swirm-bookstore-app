@@ -47,10 +47,11 @@
             <div class="feedback">
                 <p class="overall_rating">Overall rating</p>
                 <div class="stars">
-                    <mat-icon *ngFor="let i of [1,2,3,4,5]">star_outline</mat-icon>
+                    <mat-icon *ngFor="let star of stars; let idx=index"
+                    (click)="onStarClick(idx)">{{star?'star':'star_outline'}}</mat-icon>
                 </div>
-                <textarea placeholder="Write your review"></textarea>
-                <button mat-raised-button>Submit</button>
+                <textarea placeholder="Write your review" [(ngModel)]="comment"></textarea>
+                <button mat-raised-button (click)="addReview()">Submit</button>
             </div>
             <div class="reviews" *ngFor="let i of feedbacks">
                 <div class="review">

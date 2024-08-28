@@ -44,19 +44,19 @@ left: 990px;"></div>
                 <mat-icon>favorite_outline</mat-icon>
                 <p>My Wishlist</p>
             </div>
-            <button mat-button>Logout</button>
+            <button mat-button (click)="logout()">Logout</button>
         </div>
         <div *ngIf="!isLoggedIn"  class="dialog-not-authenticated">
             <div class="welcome-login-signup">
                 <p>Welcome</p>
                 <p>To access account and manage orders</p>
-                <button mat-button>LOGIN/SIGNUP</button>
+                <button mat-button [routerLink]="['/loginsignup']">LOGIN/SIGNUP</button>
             </div>
-            <div class="my_orders"  >
+            <div class="my_orders" [routerLink]="['/pleaselogin']" >
                 <mat-icon>markunread_mailbox_outline</mat-icon>
                 <p>My Orders</p>
             </div>
-            <div class="wishlist">
+            <div class="wishlist" [routerLink]="['/pleaselogin']">
                 <mat-icon>favorite_outline</mat-icon>
                 <p>My Wishlist</p>
             </div>

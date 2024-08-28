@@ -10,7 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { FormsModule } from '@angular/forms';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -19,21 +19,26 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
+import { LoginsignupComponent } from './components/loginsignup/loginsignup.component'; 
 import { MyorderComponent } from './components/myorder/myorder.component';
 
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
+
 
 import { BookcardComponent } from './components/bookcard/bookcard.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookDetailsComponent,
     DashboardComponent,
-    MycartComponent,
     NavbarComponent,
+    MycartComponent,
+    PleaseloginComponent,
+    LoginsignupComponent,
     MyorderComponent,
     WishlistComponent,
     PleaseloginComponent,
@@ -51,7 +56,9 @@ import { BookcardComponent } from './components/bookcard/bookcard.component';
     MatFormFieldModule,
     MaterialModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
