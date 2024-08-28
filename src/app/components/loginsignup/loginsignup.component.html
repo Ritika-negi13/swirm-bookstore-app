@@ -51,7 +51,7 @@
                     <mat-form-field>
                         <label>Full Name</label>
                         <br>
-                        <input formControlName="fullname" type="text">
+                        <input formControlName="fullName" type="text">
                     </mat-form-field>
                     <mat-form-field>
                         <label>Email Id</label>
@@ -70,7 +70,7 @@
                     </mat-form-field>
                     <br>
                     </div>
-                    <button class="submit" type="submit" [disabled]="!signupForm.valid" (click)="signup()">Signup</button>
+                    <button class="submit" type="submit" (click)="signup()" [disabled]="!signupForm.valid" >Signup</button>
                 </form>
             </div>
         </div>

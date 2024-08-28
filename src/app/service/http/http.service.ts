@@ -20,4 +20,7 @@ export class HttpService {
   userlogin=(url:any,data:any)=>{
     return this.http.post(this.baseurl+url,data)
   }
+  usersignup=(url:any,data:any)=>{
+    return this.http.post(this.baseurl+url,data)
+  }
 }

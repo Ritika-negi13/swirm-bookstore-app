@@ -22,7 +22,7 @@ export class LoginsignupComponent {
      password:['',[Validators.required]]
    });
    this.signupForm=this.fb.group({
-    fullname:['',[Validators.required]],
+    fullName:['',[Validators.required]],
     email:['',[Validators.required,Validators.email]],
     password:['',[Validators.required]],
     phone:['',[Validators.required]]
@@ -32,7 +32,7 @@ export class LoginsignupComponent {
     if(this.loginForm.invalid) return;
     const {email,password}=this.loginForm.value;
     console.log({email,password})
-    return this.http.userlogin('/login',{email,password}).subscribe({
+    this.http.userlogin('/login',{email,password}).subscribe({
       next:(res : any)=>{
       localStorage.setItem("acesstoken",res.result.accessToken);
       this.router.navigate(['']);
@@ -43,8 +43,16 @@ export class LoginsignupComponent {
   }
   signup(){
     if(this.signupForm.invalid) return;
-    const {fullname,email,password,phone}=this.loginForm.value;
-    console.log({fullname,email,password,phone}) 
+    const {fullName,email,password,phone}=this.signupForm.value;
+    console.log({fullName,email,password,phone}) 
+    this.http. usersignup('/registration',{fullName,email,password,phone}).subscribe({
+      next:(res : any)=>{
+        console.log(res);
+      window.location.reload();
+    },
+    error:(err)=>{
+      console.log("err",err);
+    }})
   }
   change(){
     if(this.flag==='login')
