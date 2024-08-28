@@ -1,0 +1,25 @@
+<div class="orders" *ngFor="let book of orderBooks">
+    <mat-card class="card">
+        <div class="order">
+            <div class="order-details">
+                <div>
+                    <img src="../../../assets/Image 11.png" alt="">
+                </div>
+                <div>
+                    <p class="name" >{{book.product_name}}
+                    </p>
+                    <p class="author">by Ishu Gupta {{book.author}}</p>
+                    <p class="disprice">Rs. {{book.product_price / 2}} <span
+                          class="price"><s>Rs. {{book.product_price}}</s></span></p>
+                </div>
+            </div>
+            <div class="order-place">
+                <div class="dot"></div>
+                <div>
+                    <h3 class="order-time"> Order Placed on May 21</h3>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    <!-- <app-order-container></app-order-container> -->
+</div>
