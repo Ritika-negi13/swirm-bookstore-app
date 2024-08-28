@@ -1,1 +1,11 @@
-<p>breadcrumb works!</p>
+<div class="path">
+    <nav>
+        <span routerLink="/dashboard" style="color: #9D9D9D;">Home /</span>
+        <span *ngIf="currentPath === '/dashboard/profile'">Profile</span>
+        <span *ngIf="currentPath === '/dashboard/bookDetails'">Book(01)</span>
+        <span *ngIf="currentPath === '/dashboard/mycart'">My cart</span>
+        <span *ngIf="currentPath === '/dashboard/myorder'">My Order</span>
+        <span *ngIf="currentPath === '/dashboard/mywishlist'">My Wishlist</span>
+        
+    </nav>
+</div>

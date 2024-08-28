@@ -20,9 +20,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MyorderComponent } from './components/myorder/myorder.component';
-import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component'; 
 
+
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
+
+import { BookcardComponent } from './components/bookcard/bookcard.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,10 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
     NavbarComponent,
     MyorderComponent,
     PleaseloginComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    WishlistComponent,
+    PleaseloginComponent,
+    BookcardComponent
   ],
   imports: [
     BrowserModule,

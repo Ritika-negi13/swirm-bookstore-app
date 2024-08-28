@@ -8,13 +8,16 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 import { MycartComponent } from './components/mycart/mycart.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
+import { BookcardComponent } from './components/bookcard/bookcard.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
+// src/app/app-routing.module.ts
 const routes: Routes = [
   {
-    path:'dashboard',
-    component:DashboardComponent,
-    children:[
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
       {
         path: 'bookDetails',
         component: BookDetailsComponent,
@@ -28,12 +31,16 @@ const routes: Routes = [
         component: MycartComponent,
       },
       {
-        path:'pleaselogin',
-        component:PleaseloginComponent
+        path: 'pleaselogin',
+        component: PleaseloginComponent,
+      },
+      {
+        path: 'myorder',
+        component: MyorderComponent,
       }
     ]
   }
-]; 
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
