@@ -9,6 +9,7 @@ import { WishlistService } from 'src/app/service/wishlist/wishlist.service';
 })
 export class WishlistComponent implements OnInit {
   wishlistItems:any=[];
+  wislistLength:number=0;
   constructor(private wishListService:WishlistService){}
   ngOnInit(): void {
     this.wishListService.getWishlist('/get_wishlist_items').subscribe({
@@ -16,6 +17,7 @@ export class WishlistComponent implements OnInit {
         this.wishlistItems=res.result.filter((i:any)=>{
           return i.product_id!=null;
         });
+        this.wislistLength=this.wishlistItems.length;
         console.log(this.wishlistItems)
       },
       error:(err)=>console.log(err),
