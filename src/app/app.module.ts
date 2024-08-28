@@ -26,7 +26,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
 
 import { BookcardComponent } from './components/bookcard/bookcard.component';
-import { OrderPlacedComponent } from './order-placed/order-placed.component';
+import { OrderPlacedComponent } from '../app/components/order-placed/order-placed.component';
 
 @NgModule({
   declarations: [
@@ -53,9 +53,9 @@ import { OrderPlacedComponent } from './order-placed/order-placed.component';
     MatFormFieldModule,
     MaterialModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
