@@ -11,6 +11,7 @@ export class BookcardComponent {
 
   constructor(private https: HttpService, private bookdata : BookdataService) { }
   books!: any[];
+  bookId : any;
   bookImg: any[] = ["../../../assets/Image 8.png", "../../../assets/Image 7.png", "../../../assets/Image 11.png", "../../../assets/Image 12.png", "../../../assets/Image 36.png", "../../../assets/Image 8.png"];
   filterBookList:any[]=[];
   option: string = 'price';
@@ -30,6 +31,10 @@ export class BookcardComponent {
     this.filterBookList.sort((a: any, b: any) => {
       return a[event] - b[event];
     });
+ }
+ getId(e : any){
+  console.log(e);
+  this.bookdata.updateBookId(e);
  }
 
 }

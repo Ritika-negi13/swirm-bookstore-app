@@ -8,8 +8,14 @@ import { BehaviorSubject } from 'rxjs';
 export class BookdataService {
 
   books!: any[];
+  //in bookdata we have stored all of the books details
   booksData = new BehaviorSubject<any>([]);
-  bookImg: any[] = ["../../../assets/Image 8.png", "../../../assets/Image 7.png", "../../../assets/Image 11.png", "../../../assets/Image 12.png", "../../../assets/Image 36.png", "../../../assets/Image 8.png"];
+  bookImg: any[] = ["../../../assets/Image 8@2x.png", "../../../assets/Image 7@2x.png", "../../../assets/Image 11@2x.png", "../../../assets/Image 12@2x.png", "../../../assets/Image 36@2x.png"];
+
+
+  //for book-details getting book id
+  bookId = new BehaviorSubject('');
+
 
   constructor(private https: HttpService) { }
 
@@ -30,6 +36,11 @@ export class BookdataService {
   getBookImg() {
     const randomIndex = Math.floor(Math.random() * this.bookImg.length);
     return this.bookImg[randomIndex];
+  }
+
+  //for book-details getting id 
+  updateBookId(id :any){
+    this.bookId.next(id);
   }
 
 }
