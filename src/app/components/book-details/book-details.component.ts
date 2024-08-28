@@ -16,6 +16,7 @@ export class BookDetailsComponent {
   ngOnInit(){
     this.bookId=localStorage.getItem("bookId");
     this.bookdata.booksData.subscribe((book)=>{
+      this.book=[];
       this.book = book.filter((b:any)=>{
         if(b._id === this.bookId){
           return b;
