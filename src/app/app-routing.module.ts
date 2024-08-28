@@ -13,8 +13,6 @@ import { LoginsignupComponent } from './components/loginsignup/loginsignup.compo
 
 
 const routes: Routes = [
-  // {path : '', component : DashboardComponent, children :[{path:'',component : BookcardComponent}]},
-
   {
     path: '',
     component: DashboardComponent,
