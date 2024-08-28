@@ -10,7 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { FormsModule } from '@angular/forms';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -51,7 +51,8 @@ import { BookcardComponent } from './components/bookcard/bookcard.component';
     MatFormFieldModule,
     MaterialModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
