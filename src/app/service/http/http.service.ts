@@ -16,4 +16,8 @@ export class HttpService {
   getBookdetails = (url:any)=>{
     return this.http.get(this.baseurl+url);
   }
+
+  postService=(url:any,data:any,token:boolean,headers:any)=>{
+    return this.http.post(this.baseurl+url,data,token&&headers);
+  }
 }
