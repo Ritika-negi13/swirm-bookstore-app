@@ -13,7 +13,7 @@ export class HttpService {
     return this.http.get(this.baseurl+url,token&&headers);
   }
 
-  getBookdetails = (data:any)=>{
-    return this.http.get(this.baseurl+data);
+  getBookdetails = (url:any)=>{
+    return this.http.get(this.baseurl+url);
   }
 }
