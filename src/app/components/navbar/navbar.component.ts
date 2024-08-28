@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   constructor(private router:Router){}
+  showdialog=false;
   openProfile(){
     this.router.navigate(['/dashboard/profile']);
+    this.showdialog=!this.showdialog;
   }
 }
