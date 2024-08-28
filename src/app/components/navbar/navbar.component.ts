@@ -12,11 +12,11 @@ export class NavbarComponent {
   isLoggedIn=true;
   showdialog = false;
   openwishlist() {
-    this.router.navigate(['/dashboard/wishlist']);
+    this.router.navigate(['/wishlist']);
     this.showdialog=false;
   }
   openorders() {
-    this.router.navigate(['/dashboard/myorder']);
+    this.router.navigate(['/myorder']);
     this.showdialog=false;
   }
   
@@ -24,7 +24,7 @@ export class NavbarComponent {
     this.showdialog = !this.showdialog;
   }
   openProfile = () => {
-    this.router.navigate(['/dashboard/profile']);
+    this.router.navigate(['/profile']);
     this.showdialog = false;
   }
 

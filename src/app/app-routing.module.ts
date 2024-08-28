@@ -12,8 +12,10 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
 const routes: Routes = [
+  // {path : '', component : DashboardComponent, children :[{path:'',component : BookcardComponent}]},
+
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardComponent,
     children: [
       { path: "", component: BookcardComponent },
@@ -26,13 +28,13 @@ const routes: Routes = [
         component: ProfileComponent,
       },
       {
-        path:'pleaselogin',
-        component:PleaseloginComponent
+        path: 'pleaselogin',
+        component: PleaseloginComponent
       },
       { path: 'wishlist', component: WishlistComponent },
       { path: 'cart', component: MycartComponent },
-      {path : 'bookdetail', component : BookDetailsComponent},
-      {path : 'myorder', component : MyorderComponent}
+      { path: 'bookdetail', component: BookDetailsComponent },
+      { path: 'myorder', component: MyorderComponent }
     ]
   }
 ];

@@ -9,7 +9,7 @@
     </mat-form-field>
 </div>
 <div class="bookcard">
-    <div class="book" *ngFor="let book of paginationBook" [routerLink]="['/dashboard/bookdetail']">
+    <div class="book" *ngFor="let book of paginationBook" [routerLink]="['/bookdetail']">
         <div (click)="getId(book._id)">
             <div class="book_image">
                 <img src={{book.imgPath}} alt="bookImage">
