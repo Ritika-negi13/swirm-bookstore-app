@@ -4,7 +4,10 @@
             <div style="padding-right: 7px;"><img src="../../../assets/logo.svg" alt="i"></div>
             <span>Bookstore</span>
         </div>
-
+        <div class="search">
+            <div><mat-icon class="src-icon">search</mat-icon></div>
+            <input type="text" placeholder="Search">
+        </div>
         <span class="example-spacer"></span>
         <div class="nav-btn">
             <button mat-button class="nav-icon" (click)="openProfile()">
@@ -17,9 +20,17 @@
                     <span>Profile</span>
                 </div>
             </button>
+            <!-- <div class="demo-section">
+                <mat-icon matBadge="14">home</mat-icon> -->
+                <!-- Include text description of the icon's meaning for screen-readers -->
+                <!-- <span class="cdk-visually-hidden">
+                    Example with a home icon with overlaid badge showing the number 15
+                </span>
+            </div> -->
             <button mat-button class="nav-icon" [routerLink]="['/cart']">
                 <div style="display: flex; flex-direction: column;">
-                    <img src="../../../assets/cart.svg" alt="" height="30px" width="30px">
+                    <mat-icon svgIcon="cart" style="height:30px; width : 30px;" matBadge="{{cartNo}}"></mat-icon>
+                    <!-- <img src="../../../assets/cart.svg" alt="" height="30px" width="30px" matBadge="15"> -->
                     <span>Cart</span>
                 </div>
             </button>
