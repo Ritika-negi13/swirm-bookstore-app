@@ -64,17 +64,17 @@
                     </div>  
                 </div>
                 <br>
-                <div class="radio">
+                <div class="radio" *ngIf="add.isADisabled" >
                     <div>
-                        <input type="radio" id="home" name="add.type"  value="Home" [(ngModel)]="add.type" [disabled]="!add.isADisabled">
+                        <input type="radio" name="add.type" value="Home" [(ngModel)]="add.type" [disabled]="!add.isADisabled">
                         <label for="home">Home</label>
                     </div>
                     <div>
-                        <input type="radio" id="work" name="add.type" value="Work"  [(ngModel)]="add.type" [disabled]="!add.isADisabled">
+                        <input type="radio" name="add.type" value="Work"  [(ngModel)]="add.type" [disabled]="!add.isADisabled">
                         <label for="work">Work</label>
                     </div>
                     <div>
-                        <input type="radio" id="other" name="add.type" value="Other"  [(ngModel)]="add.type" [disabled]="!add.isADisabled">
+                        <input type="radio" name="add.type" value="Other"  [(ngModel)]="add.type" [disabled]="!add.isADisabled">
                         <label for="other">Other</label>
                     </div> 
                 </div>
