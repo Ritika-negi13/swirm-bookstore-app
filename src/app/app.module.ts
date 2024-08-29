@@ -18,27 +18,33 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
+import { LoginsignupComponent } from './components/loginsignup/loginsignup.component'; 
 import { MyorderComponent } from './components/myorder/myorder.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
 import { RouterModule } from '@angular/router';
+
+
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookDetailsComponent,
     DashboardComponent,
-    MycartComponent,
     NavbarComponent,
+    MycartComponent,
+    PleaseloginComponent,
+    LoginsignupComponent,
     MyorderComponent,
     WishlistComponent,
-    PleaseloginComponent,
     BookcardComponent,
-    OrderPlacedComponent
+    OrderPlacedComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -50,14 +56,12 @@ import { RouterModule } from '@angular/router';
     MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MaterialModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
     RouterModule,
     FormsModule,
     MatCardModule,
     MatGridListModule,
-    MatDividerModule
+    MatDividerModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
