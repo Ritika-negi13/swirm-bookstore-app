@@ -4,8 +4,6 @@
             <div style="padding-right: 7px;"><img src="../../../assets/logo.svg" alt="i"></div>
             <span>Bookstore</span>
         </div>
-
-
         <div class="search">
             <div><mat-icon class="src-icon">search</mat-icon></div>
             <input type="text" placeholder="Search">
@@ -28,8 +26,7 @@
         </div>
     </mat-toolbar>
     <div *ngIf="showdialog" class="dialog-box">
-        <div style=" position: absolute; width: 81px; height: 10px; border-radius: 3px; background: #FFFFFF 0% 0% no-repeat padding-box; top: 56px;
-left: 990px;"></div>
+        <div style=" width: 81px; height: 10px; border-radius: 3px; background: #FFFFFF 0% 0% no-repeat padding-box; top: 56px;left: 80%;"></div>
         <div *ngIf="isLoggedIn" class="dialog-authenticated">
             <p>Hello Poonam,</p>
             <div class="profile" (click)="openProfile()">

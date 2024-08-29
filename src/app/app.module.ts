@@ -35,13 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     BookDetailsComponent,
     DashboardComponent,
-<<<<<<< HEAD
-    NavbarComponent,
-    MycartComponent,
-=======
     MycartComponent,
     NavbarComponent,
->>>>>>> c6333d77a599f9fd980cd6fbdbf24c916b958721
     PleaseloginComponent,
     LoginsignupComponent,
     MyorderComponent,
