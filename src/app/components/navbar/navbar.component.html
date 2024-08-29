@@ -5,14 +5,13 @@
             <span>Bookstore</span>
         </div>
 
-
         <div class="search">
             <div><mat-icon class="src-icon">search</mat-icon></div>
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" [(ngModel)]="searchQuery">
         </div>
 
         <span class="example-spacer"></span>
-        <div class="nav-btn" >
+        <div class="nav-btn">
             <button mat-button class="nav-icon" (click)="openProfile()">
                 <div style="display: flex; flex-direction: column;">
                     <img src="../../../assets/profile.svg" alt="" height="30px" width="30px" style="margin-left: 10px;">
@@ -27,4 +26,6 @@
             </button>
         </div>
     </mat-toolbar>
+
+    
 </div>

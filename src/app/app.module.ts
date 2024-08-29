@@ -11,22 +11,21 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
-
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCardModule} from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MyorderComponent } from './components/myorder/myorder.component';
-
+import { FormsModule } from '@angular/forms';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
-
+import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
-import { OrderPlacedComponent } from './order-placed/order-placed.component';
+import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
+import { SearchPipe } from './service/custom-pipes.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +38,8 @@ import { OrderPlacedComponent } from './order-placed/order-placed.component';
     WishlistComponent,
     PleaseloginComponent,
     BookcardComponent,
-    OrderPlacedComponent
+    OrderPlacedComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -51,9 +51,8 @@ import { OrderPlacedComponent } from './order-placed/order-placed.component';
     MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MaterialModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
