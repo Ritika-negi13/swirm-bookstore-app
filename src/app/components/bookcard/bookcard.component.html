@@ -35,12 +35,13 @@
             </div>
         </div>
     </div>
-    <!-- pagination  -->
-    <div class="pagination">
-        <button (click)="previousPage()" [disabled]="currentPageno === 1" class="navinagtionBtn"> < </button>
-        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 1}">1</span>
-        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 2}">2</span>
-        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 3}">3</span>
-        <button (click)="nextPage()" [disabled]="currentPageno === totalPage" class="navinagtionBtn"> > </button>
-    </div>
+    
+</div>
+<!-- pagination  -->
+<div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPageno === 1" class="navinagtionBtn"> < </button>
+    <span class="page" [ngClass]="{'SelectedPage': currentPageno === 1}">1</span>
+    <span class="page" [ngClass]="{'SelectedPage': currentPageno === 2}">2</span>
+    <span class="page" [ngClass]="{'SelectedPage': currentPageno === 3}">3</span>
+    <button (click)="nextPage()" [disabled]="currentPageno === totalPage" class="navinagtionBtn"> > </button>
 </div>
