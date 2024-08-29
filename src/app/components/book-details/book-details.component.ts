@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BookdataService } from 'src/app/service/bookdata/bookdata.service';
+import { CartService } from 'src/app/service/cart/cart.service';
 import { FeedbackService } from 'src/app/service/feedback/feedback.service';
 import { WishlistService } from 'src/app/service/wishlist/wishlist.service';
 
@@ -16,7 +17,7 @@ export class BookDetailsComponent {
   stars=[false,false,false,false,false];
   comment:string='';
   constructor(private bookdata : BookdataService, private feedbackService:FeedbackService,
-    private wishlistService:WishlistService, private router:Router
+    private wishlistService:WishlistService, private router:Router, private cartService:CartService
   ){}
 
   ngOnInit(){
@@ -80,6 +81,20 @@ export class BookDetailsComponent {
           console.log("product is already in list");
         }
         else this.router.navigate(['/wishlist']);
+      },
+      error:(err)=>console.log(err),
+      complete:()=>{}
+    })
+  }
+
+  addToCart=()=>{
+    this.cartService.addToCart('/add_cart_item',this.bookId).subscribe({
+      next:(res:any)=>{
+        console.log(res);
+        if(res.message=='Product item is already added, increase the item count'){
+          console.log("Product item is already added, increase the item count");
+        }
+        else this.router.navigate(['/myorder'])
       },
       error:(err)=>console.log(err),
       complete:()=>{}
