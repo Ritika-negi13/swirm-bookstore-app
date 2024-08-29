@@ -34,4 +34,10 @@ export class BookService {
     myHeaders.append('x-access-token', `${this.access_token}`);
     return this.http.removeCartItem(id, '/remove_cart_item/', true, { headers: myHeaders });
   };
+
+  editQuantity = (id : any, data : any) => {
+    const myHeaders = new Headers();
+    myHeaders.append('x-access-token', `${this.access_token}`);
+    return this.http.editQuantity(id, data, '/cart_item_quantity/', true, { headers: myHeaders });
+  }
 }

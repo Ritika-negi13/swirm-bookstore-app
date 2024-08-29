@@ -35,10 +35,34 @@ export class MycartComponent {
   }
   incValue(ind : any) {
     this.cartItems[ind].quantityToBuy++;
+    this.book
+      .editQuantity(this.cartItems[ind]._id, {
+        quantityToBuy: this.cartItems[ind].quantityToBuy,
+      })
+      .subscribe({
+        next: (data: any) => {
+          console.log(data);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
   }
   decValue(ind : any) {
     if (this.cartItems[ind].quantityToBuy > 1) {
       this.cartItems[ind].quantityToBuy--;
+      this.book
+        .editQuantity(this.cartItems[ind]._id, {
+          quantityToBuy: this.cartItems[ind].quantityToBuy,
+        })
+        .subscribe({
+          next: (data: any) => {
+            console.log(data);
+          },
+          error: (error) => {
+            console.log(error);
+          },
+        });
     }
   }
   removeItem(ind : any) {
