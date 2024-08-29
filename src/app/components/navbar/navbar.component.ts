@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { HttpService } from 'src/app/service/http/http.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,18 +9,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, private http:HttpService) { }
   isLoggedIn=false;
   showdialog = false;
   ngOnInit(){
-    console.log(localStorage.getItem("acesstoken"))
-    if(localStorage.getItem("acesstoken"))
-    {
-      this.isLoggedIn=true;
+    /*******************************************************************************/
+    //please do not remove this code, this is for admin login
+    this.http.adminlogin('/admin/login', {
+      email: 'admin@test.com',
+      password: 'test@123',
+    }).subscribe({
+      next: (res: any) => {
+        console.log("token:",res);
+        localStorage.setItem('admin_accesstoken', res.result.accessToken);
+      },
+      error: (error: any) => {
+        console.log(error);
+      }
+    });
+
+    /*******************************************************************************/
+    console.log(localStorage.getItem('acesstoken'));
+    if (localStorage.getItem('acesstoken')) {
+      this.isLoggedIn = true;
       console.log(this.isLoggedIn);
-    }
-    else
-      this.isLoggedIn=false;
+    } else this.isLoggedIn = false;
   }
   openwishlist() {
     this.router.navigate(['/wishlist']);
