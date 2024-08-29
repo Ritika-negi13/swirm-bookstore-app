@@ -28,4 +28,7 @@ export class HttpService {
   userlogin=(url:any,data:any)=>{
     return this.http.post(this.baseurl+url,data)
   }
+  deleteService=(url:any,token:boolean,headers:any)=>{
+    return this.http.delete(this.baseurl+url,token&&headers);
+  }
 }

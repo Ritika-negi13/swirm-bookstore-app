@@ -6,7 +6,7 @@ import { HttpService } from '../http/http.service';
   providedIn: 'root'
 })
 export class FeedbackService {
-  access_token ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdhMDkzY2VhZTVjNDAwMGVkMGVkMDIiLCJpYXQiOjE3MjQ4NjM0MzMsImV4cCI6MTcyNDk0OTgzM30.8OEpM6gSD6wEW-Ity_PDTBopXZ0TJQffsV8sScoXEYE';
+  access_token =localStorage.getItem("acesstoken");
   
   constructor(private http:HttpService) { }
   

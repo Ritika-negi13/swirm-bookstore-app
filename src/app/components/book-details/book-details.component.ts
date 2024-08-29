@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { BookdataService } from 'src/app/service/bookdata/bookdata.service';
 import { FeedbackService } from 'src/app/service/feedback/feedback.service';
+import { WishlistService } from 'src/app/service/wishlist/wishlist.service';
 
 @Component({
   selector: 'app-book-details',
@@ -13,7 +15,9 @@ export class BookDetailsComponent {
   feedbacks:any=[];
   stars=[false,false,false,false,false];
   comment:string='';
-  constructor(private bookdata : BookdataService, private feedbackService:FeedbackService){}
+  constructor(private bookdata : BookdataService, private feedbackService:FeedbackService,
+    private wishlistService:WishlistService, private router:Router
+  ){}
 
   ngOnInit(){
     this.bookdata.bookId.subscribe((id)=>{
@@ -65,6 +69,20 @@ export class BookDetailsComponent {
     for(let i=0;i<this.stars.length;i++){
       this.stars[i]=i<=index;
     }
+  }
+
+  addToWishlist=()=>{
+    this.wishlistService.addToWishlist('/add_wish_list',this.bookId).subscribe({
+      next:(res:any)=>{
+        console.log(res);
+        if(res.message=='Product item is already in wish list'){
+          console.log("product is already in list");
+        }
+        else this.router.navigate(['/wishlist']);
+      },
+      error:(err)=>console.log(err),
+      complete:()=>{}
+    })
   }
 
 }
