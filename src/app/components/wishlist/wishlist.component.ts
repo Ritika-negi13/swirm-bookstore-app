@@ -20,18 +20,18 @@ export class WishlistComponent implements OnInit {
         this.wislistLength=this.wishlistItems.length;
         console.log(this.wishlistItems)
       },
-      error:(err)=>console.log(err),
+      error:(err:any)=>console.log(err),
       complete:()=>{}
     })
   }
 
   deleteFromWishlist=(param:any)=>{
     this.wishlistService.deleteFromWishlist('/remove_wishlist_item',param).subscribe({
-      next:(res)=>{
+      next:(res:any)=>{
         console.log(res);
         window.location.reload();
       },
-      error:(err)=>console.log(err),
+      error:(err:any)=>console.log(err),
       complete(){}
     })
   }
