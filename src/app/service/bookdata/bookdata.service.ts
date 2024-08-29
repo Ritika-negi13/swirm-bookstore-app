@@ -41,6 +41,7 @@ export class BookdataService {
   //for book-details getting id 
   updateBookId(id :any){
     this.bookId.next(id);
+    localStorage.setItem("bookId",id);
   }
 
 }

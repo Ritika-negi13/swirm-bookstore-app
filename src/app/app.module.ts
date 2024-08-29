@@ -10,7 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { FormsModule } from '@angular/forms';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -35,13 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     BookDetailsComponent,
     DashboardComponent,
-<<<<<<< HEAD
     NavbarComponent,
     MycartComponent,
-=======
-    MycartComponent,
-    NavbarComponent,
->>>>>>> c6333d77a599f9fd980cd6fbdbf24c916b958721
     PleaseloginComponent,
     LoginsignupComponent,
     MyorderComponent,
@@ -61,8 +56,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MaterialModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
