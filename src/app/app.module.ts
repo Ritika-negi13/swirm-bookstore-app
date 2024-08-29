@@ -25,7 +25,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
-import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,7 @@ import { Router } from '@angular/router';
     MaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    Router,
+    RouterModule,
     FormsModule,
     MatCardModule,
     MatGridListModule,
