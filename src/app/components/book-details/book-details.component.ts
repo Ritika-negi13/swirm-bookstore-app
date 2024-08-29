@@ -96,7 +96,7 @@ export class BookDetailsComponent {
         }
         else this.router.navigate(['/myorder'])
       },
-      error:(err)=>console.log(err),
+      error:(err:any)=>console.log(err),
       complete:()=>{}
     })
   }
