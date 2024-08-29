@@ -10,7 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { FormsModule } from '@angular/forms';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -26,7 +26,6 @@ import { MyorderComponent } from './components/myorder/myorder.component';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 
-import { FormsModule } from '@angular/forms';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -56,8 +55,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     MatFormFieldModule,
     MaterialModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   providers: [],
