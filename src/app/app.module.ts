@@ -28,7 +28,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
 import { BookcardComponent } from './components/bookcard/bookcard.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

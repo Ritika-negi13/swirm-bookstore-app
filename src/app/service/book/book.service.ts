@@ -28,4 +28,10 @@ export class BookService {
     myHeaders.append('x-access-token', `${this.access_token}`);
     return this.http.getCartItems(url, true, { headers: myHeaders });
   };
+
+  removeCartItem = (id : any) => {
+    const myHeaders = new Headers();
+    myHeaders.append('x-access-token', `${this.access_token}`);
+    return this.http.removeCartItem(id, '/remove_cart_item/', true, { headers: myHeaders });
+  };
 }

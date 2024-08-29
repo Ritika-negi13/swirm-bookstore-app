@@ -33,12 +33,23 @@ export class MycartComponent {
   orderFunction() {
     this.isOrderSummaryVisible = !this.isOrderSummaryVisible;
   }
-  incValue() {
-    this.cartValue++;
+  incValue(ind : any) {
+    this.cartItems[ind].quantityToBuy++;
   }
-  decValue() {
-    if (this.cartValue > 1) {
-      this.cartValue--;
+  decValue(ind : any) {
+    if (this.cartItems[ind].quantityToBuy > 1) {
+      this.cartItems[ind].quantityToBuy--;
     }
+  }
+  removeItem(ind : any) {
+    this.book.removeCartItem(this.cartItems[ind]._id).subscribe({
+      next: (data : any) => {
+        console.log(data);
+        this.cartItems.splice(ind, 1);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    })
   }
 }

@@ -31,4 +31,7 @@ export class HttpService {
     return this.http.get(this.baseurl+url, token&&headers);
   }
 
+  removeCartItem = (id : any, url:any, token:Boolean, headers:any)=>{
+    return this.http.delete(this.baseurl+url+id, token&&headers);
+  }
 }

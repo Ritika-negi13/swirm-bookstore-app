@@ -1,8 +1,8 @@
 <div class="mycart-container">
-    <div class="mycart" >
+    <div class="mycart">
         <div style="display: flex; justify-content: space-between;">
-            <div class="mycart1"> 
-                <h3 style="font-weight: 500; font-size: 18px;">My cart (1)</h3>
+            <div class="mycart1">
+                <h3 style="font-weight: 500; font-size: 18px;">My cart ({{cartItems.length}})</h3>
             </div>
             <div class="location">
                 <!-- <button class="dropbtn" onclick="myFunction()"> 
@@ -13,7 +13,8 @@
                         Use current location
                     </div>
                 </button> -->
-                <button class="btn-none dropdown-toggle custom-align dropbtn" type="button" data-toggle="dropdown" required>
+                <button class="btn-none dropdown-toggle custom-align dropbtn" type="button" data-toggle="dropdown"
+                    required>
                     <div>
                         <img src="../../../assets/map.svg" alt="">
                     </div>
@@ -24,29 +25,39 @@
             </div>
         </div>
         <div class="scroll">
-            <div style="display: flex; margin-left: 2%; height: 47%; margin-top: 2px; margin-bottom: 56px;" *ngFor="let book of cartItems">
+            <div style="display: flex; margin-left: 2%; height: 47%; margin-top: 2px; margin-bottom: 56px;"
+                *ngFor="let book of cartItems; let ind = index">
                 <div class="image">
                     <img src="../../../assets/Image 11.png" alt="" style="height: 100%;">
                 </div>
                 <div class="details">
                     <h4 style="font-weight: 500;">{{book.product_id.bookName}}</h4>
                     <p style="font-size: 14px; color: #9D9D9D;">by {{book.product_id.author}}</p>
-                    <p style="font-size: 14px; font-weight: 500;">Rs. {{book.product_id.discountPrice}} <span style="color: #9D9D9D; font-size: 10px; margin-left: 2px;"><s>Rs. {{book.product_id.price}}</s></span></p>
+                    <p style="font-size: 14px; font-weight: 500;">Rs. {{book.product_id.discountPrice}} <span
+                            style="color: #9D9D9D; font-size: 10px; margin-left: 2px;"><s>Rs.
+                                {{book.product_id.price}}</s></span></p>
                     <div style="display: flex; justify-content: space-between; width: 50%;">
                         <div style="display: flex; gap: 10px; ">
-                            <button class="btn" (click)="decValue()" [disabled]="cartValue === 1" >–</button>
-                            <div class = "item"><span>{{book.quantityToBuy}}</span></div>
-                            <button class="btn" (click)="incValue()"><img src="../../../assets/plus.svg" alt=""></button>
+                            <button class="btn" (click)="decValue(ind)" [disabled]="book.quantityToBuy === 1">–</button>
+                            <!-- <div class = "item"> -->
+                            <input type="number" class="item" [(ngModel)]="book.quantityToBuy">
+                            <!-- </div> -->
+                            <button class="btn" (click)="incValue(ind)"><img src="../../../assets/plus.svg"
+                                    alt=""></button>
                         </div>
                         <div>
-                            <div style="margin-left: 24px;font-size: 13px; font-weight: 500;">Remove</div>
+                            <div style="margin-left: 24px; font-size: 13px; font-weight: 500; cursor: pointer;" (click)="removeItem(ind)">Remove
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div style="display: flex; justify-content: end; margin-right: 30px; margin-bottom: 2px;" *ngIf="!isFormContainerVisible">
-            <button class = "btn" style="background-color: #3371B5; color: white; width: 151px; height: 35px; border-radius: 2px; cursor: pointer; margin-bottom: 10px;" (click)="formFunction()">PLACE ORDER</button>
+        <div style="display: flex; justify-content: end; margin-right: 30px; margin-bottom: 2px;"
+            *ngIf="!isFormContainerVisible">
+            <button class="btn"
+                style="background-color: #3371B5; color: white; width: 151px; height: 35px; border-radius: 2px; cursor: pointer; margin-bottom: 10px;"
+                (click)="formFunction()">PLACE ORDER</button>
         </div>
     </div>
 </div>
@@ -105,7 +116,7 @@
             </div>
         </div>
         <div class="buttons" *ngIf="!isOrderSummaryVisible">
-            <button class = "continue" (click)="orderFunction()">CONTINUE</button>
+            <button class="continue" (click)="orderFunction()">CONTINUE</button>
         </div>
     </div>
 </div>
