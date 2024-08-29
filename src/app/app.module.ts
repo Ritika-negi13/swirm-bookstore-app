@@ -29,6 +29,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -41,8 +42,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginsignupComponent,
     MyorderComponent,
     WishlistComponent,
-    PleaseloginComponent,
-    BookcardComponent
+    BookcardComponent,ProfileComponent
   ],
   imports: [
     BrowserModule,

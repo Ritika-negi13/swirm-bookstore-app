@@ -1,26 +1,31 @@
 <div class="main">
-    <div style="display: flex; gap:1%">
-        <p class="heading">Personal Details </p><a>Edit</a>
+    <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex;gap:3px;">
+            <p class="heading">Personal Details </p><a (click)="unableEditing()">Edit</a>
+        </div>
+        <div *ngIf="isPDisabled" >
+            <button style="padding: 7px 15px 7px 15px ; margin-right: 0px;" (click)="unableEditing()">Save</button> 
+        </div>
     </div>
     <div id="Personaldetails"> 
         <label>Full Name</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isPDisabled" placeholder="Ritika Negi">
         <br>
         <br>
         <label>Email Id</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isPDisabled" placeholder="ritika@gmail.com">
         <br>
         <br>
         <label>Password</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isPDisabled" placeholder="Ritika@123">
         <br>
         <br>
         <label>Mobile Number</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isPDisabled" placeholder="9811461310">
         <br>
         <br>
     </div>
@@ -28,41 +33,47 @@
         <p class="heading">Address</p>
         <button>Add New Address</button>
     </div>
+    <br>
     <div>
-        <div style="display: flex; gap:3%">
-            <p style="font-weight: 600;">1.Work</p>
-            <a>Edit</a>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="display: flex; gap:10px;">
+                <p style="font-weight: 600;">1.Work</p>
+                <a (click)="unableAddress()">Edit</a>
+            </div>
+            <div *ngIf="isADisabled" >
+                <button style="padding: 7px 15px 7px 15px ; margin-right: 0px;" (click)="unableAddress()">Save</button> 
+            </div>
         </div>
         <div>
             <label>Address</label>
             <br>
-            <input type="text"> 
+            <input type="text" [disabled]="!isADisabled"> 
             <br>
             <br>
             <div id="addressdiv">
                 <div>
                     <label>City/town</label>
                     <br>
-                    <input type="text">
+                    <input type="text" [disabled]="!isADisabled">
                 </div>
                 <div>
                     <label>State</label>
                     <br>
-                    <input type="text">
+                    <input type="text" [disabled]="!isADisabled">
                 </div>  
             </div>
             <br>
             <div class="radio">
                 <div>
-                    <input type="radio" id="home" name="type" value="home">
+                    <input type="radio" id="home" name="type" value="home" [disabled]="!isADisabled">
                     <label for="home">Home</label>
                 </div>
                 <div>
-                    <input type="radio" id="work" name="type" value="work">
+                    <input type="radio" id="work" name="type" value="work" [disabled]="!isADisabled">
                     <label for="work">Work</label>
                 </div>
                 <div>
-                    <input type="radio" id="other" name="type" value="other">
+                    <input type="radio" id="other" name="type" value="other"[disabled]="!isADisabled">
                     <label for="other">Other</label>
                 </div> 
             </div>
