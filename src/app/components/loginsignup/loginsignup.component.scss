@@ -5,6 +5,10 @@
     flex-direction: row;
     align-items: center;
 }
+.image{
+    width:38%;
+    height:auto;
+}
 .line{
     color:#A03037;
     padding:2px;
@@ -20,6 +24,7 @@
 .lsbox{
     width:40%;
     height:auto;
+    cursor: pointer;
 }
 img{
     height: 90%;
@@ -100,4 +105,13 @@ button{
 }
 .inputfield{
     margin-bottom: 0px;
+}
+@media only screen and (max-width: 750px) {
+    .image{
+        display: none;
+    }
+    .lsbox{
+        width:80%;
+        height:auto;
+    }
 }

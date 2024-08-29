@@ -10,8 +10,6 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -26,9 +24,9 @@ import { MyorderComponent } from './components/myorder/myorder.component';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 
-
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -41,8 +39,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginsignupComponent,
     MyorderComponent,
     WishlistComponent,
-    PleaseloginComponent,
-    BookcardComponent
+    BookcardComponent,ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +53,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MaterialModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule

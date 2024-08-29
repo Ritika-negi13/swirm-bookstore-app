@@ -12,9 +12,8 @@
             <img width="281px" height="367px" src={{book[0].imgPath}}>
         </div>
         <div class="buttons">
-            <button mat-raised-button [routerLink]="['/cart']">ADD TO BAG</button>
-            <button mat-raised-button
-                [routerLink]="['/wishlist']"><mat-icon>favorite</mat-icon>WISHLIST</button>
+            <button mat-raised-button (click)="addToCart()"  >ADD TO BAG</button>
+            <button mat-raised-button (click)="addToWishlist()"><mat-icon>favorite</mat-icon>WISHLIST</button>
         </div>
     </div>
     <div class="right-content">
@@ -23,59 +22,44 @@
             <p style="font: normal normal normal 18px/24px Roboto; color: #878787;">by {{book[0].author}}</p>
             <div class="rating-discount">
                 <div class="rating">
-                    <p>4.5</p>
-                    <p><mat-icon style="width: 20px;height: 20px;">star</mat-icon></p>
+                    <p style="margin-left: 8px;">4.5</p>
+                    <p><mat-icon style="font-size: 15px; margin-top: 15px; margin-left: 3px;">star</mat-icon></p>
                 </div>
                 <p style="margin-top: 2%; margin-left: 2%; color: #878787;">({{book[0].quantity}})</p>
             </div>
             <div class="price">
                 <p>Rs. {{book[0].discountPrice}}</p>
-                <p>Rs. {{book[0].price}}</p>
+                <p style="text-decoration:line-through; color: #878787">Rs. {{book[0].price}}</p>
             </div>
         </div>
         <div class="right-content-center">
             <p style="color: #878787;font: normal normal normal 15px/20px Roboto;">.Book Detail</p>
-            <p style="font: normal normal normal 12px/16px Roboto;color: #373434;">Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.</p>
+            <p style="font: normal normal normal 12px/16px Roboto;color: #373434;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
         </div>
-        <div class="right-content-bottom">
+        <div class="right-content-bottom" >
             <p style="font: normal normal normal 18px/24px Roboto">Customer Feedback</p>
             <div class="feedback">
                 <p class="overall_rating">Overall rating</p>
                 <div class="stars">
-                    <mat-icon *ngFor="let i of [1,2,3,4,5]">star_outline</mat-icon>
+                    <mat-icon *ngFor="let star of stars; let idx=index"
+                    (click)="onStarClick(idx)">{{star?'star':'star_outline'}}</mat-icon>
                 </div>
-                <textarea placeholder="Write your review"></textarea>
-                <button mat-raised-button>Submit</button>
+                <textarea placeholder="Write your review" [(ngModel)]="comment"></textarea>
+                <button mat-raised-button (click)="addReview()">Submit</button>
             </div>
-            <div class="reviews">
-                <div class="review">
-                    <div class="profile_name">
-                        <mat-icon>account_circle</mat-icon>
-                        <p>Shweta Bodkar</p>
+            <div class="scrollable-div">
+                <div class="reviews" *ngFor="let i of feedbacks">
+                    <div class="review">
+                        <div class="profile_name">
+                            <mat-icon>account_circle</mat-icon>
+                            <p>{{i.user_id.fullName}}</p>
+                        </div>
+                        <div class="stars">
+                            <mat-icon style="color: #FFCE00;" *ngFor="let k of getNumbers(i.rating)">star</mat-icon>
+                            <mat-icon *ngFor="let j of getNumbers(5-i.rating)">star_outline</mat-icon>
+                        </div>
+                        <p class="desc">{{i.comment}}</p>
                     </div>
-                    <div class="stars">
-                        <mat-icon *ngFor="let i of [1,2,3,4,5]">star_outline</mat-icon>
-                    </div>
-                    <p class="desc">Good product. Even though the translation could have been better, Chanakya's neeti
-                        are thought provoking. Chanakya has written on many different topics and his writings are
-                        succinct</p>
-                </div>
-                <div class="review">
-                    <div class="profile_name">
-                        <mat-icon>account_circle</mat-icon>
-                        <p>Shweta Bodkar</p>
-                    </div>
-                    <div class="stars">
-                        <mat-icon *ngFor="let i of [1,2,3,4,5]">star_outline</mat-icon>
-                    </div>
-                    <p class="desc">Good product. Even though the translation could have been better, Chanakya's neeti
-                        are thought provoking. Chanakya has written on many different topics and his writings are
-                        succinct</p>
                 </div>
             </div>
         </div>

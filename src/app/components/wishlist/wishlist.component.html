@@ -14,7 +14,7 @@
                     <p class="card-discount"><s>Rs. {{i.product_id.discountPrice}}</s></p>
                 </div>
             </div>
-            <mat-icon>delete_outline</mat-icon>
+            <mat-icon (click)="deleteFromWishlist(i.product_id._id)" >delete_outline</mat-icon>
         </div>
     </div>
 </div>
