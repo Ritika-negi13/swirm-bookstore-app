@@ -9,6 +9,7 @@ import { MycartComponent } from './components/mycart/mycart.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
 import { LoginsignupComponent } from './components/loginsignup/loginsignup.component';
 
 
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path: 'pleaselogin',
         component: PleaseloginComponent
+      },
+      {
+        path:'orderplaced',
+        component:OrderPlacedComponent
       },
       { path: 'wishlist', component: WishlistComponent },
       { path: 'cart', component: MycartComponent },

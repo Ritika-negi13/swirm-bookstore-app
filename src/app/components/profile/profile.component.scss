@@ -60,3 +60,33 @@ button{
        color: #A03037;
     }
 }
+@media only screen and (max-width: 500px) {
+    .heading{
+        font-size: 15px;
+        color:#0A0102;   
+        font-weight: 500;
+    }
+    .main{
+        margin-top: 2%;
+        margin-left: 10%;
+        width:80%;
+        font-weight: 500;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width:800px) and (min-width: 500px) {
+    .heading{
+        font-size: 15px;
+        color:#0A0102;   
+        font-weight: 500;
+    }
+    .main{
+        margin-top: 2%;
+        margin-left: 15%;
+        width:50%;
+        font-weight: 500;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+}

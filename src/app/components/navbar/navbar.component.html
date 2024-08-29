@@ -5,13 +5,11 @@
             <span>Bookstore</span>
         </div>
 
-
-        <div class="search">
-            <div><mat-icon class="src-icon">search</mat-icon></div>
-            <input type="text" placeholder="Search">
-        </div>
-
         <span class="example-spacer"></span>
+        <div class="nav-btn">
+            <button mat-button class="nav-icon" (click)="openProfile()">
+            </button>
+        </div>
         <div class="nav-btn" >
             <button mat-button class="nav-icon" (click)="toggle()">
                 <div style="display: flex; flex-direction: column;">
@@ -27,6 +25,8 @@
             </button>
         </div>
     </mat-toolbar>
+</div>
+<div>
     <div *ngIf="showdialog" class="dialog-box">
         <div style=" position: absolute; width: 81px; height: 10px; border-radius: 3px; background: #FFFFFF 0% 0% no-repeat padding-box; top: 56px;
 left: 990px; z-index: 10;"></div>
