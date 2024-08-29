@@ -99,7 +99,7 @@ export class BookDetailsComponent {
         if(res.message=='Product item is already added, increase the item count'){
           console.log("Product item is already added, increase the item count");
         }
-        else this.router.navigate(['/myorder'])
+        else this.router.navigate(['/cart'])
       },
       error:(err:any)=>console.log(err),
       complete:()=>{}

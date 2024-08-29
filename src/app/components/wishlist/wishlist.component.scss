@@ -1,4 +1,8 @@
 .wishlist {
+    @media (max-width:526px){
+        width: 80%;
+        height: auto;
+    }
     border: 1px solid #E4E4E4;
     width: 900px;
     margin-top: 3%;
@@ -42,6 +46,9 @@
         margin-top: 5%;
         margin-left: 5%;
         color: #9D9D9D;
+        @media (max-width:526px){
+            margin-right: 10%;
+        }
     }
 
     img {
