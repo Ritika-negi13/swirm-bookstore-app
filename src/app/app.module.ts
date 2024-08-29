@@ -26,23 +26,23 @@ import { MyorderComponent } from './components/myorder/myorder.component';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 
-
+import { FormsModule } from '@angular/forms';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookDetailsComponent,
     DashboardComponent,
-    MycartComponent,
     NavbarComponent,
+    MycartComponent,
     PleaseloginComponent,
     LoginsignupComponent,
     MyorderComponent,
     WishlistComponent,
-    PleaseloginComponent,
-    BookcardComponent
+    BookcardComponent,ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +57,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule
   ],
   providers: [],

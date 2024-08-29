@@ -3,15 +3,20 @@
     margin-left: 15%;
     width:34%;
     font-weight: 500;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
 }
 input{
     width: 98%;
-    height:50px;
+    height:40px;
     color: #878787;
     background-color: #F5F5F5;
     border:2px solid #E2E2E2;
     outline: none;
     border-radius: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 15px;
 }
 // #Personaldetails{
     
@@ -37,11 +42,11 @@ button{
 #addressdiv{
     display: flex;
     justify-content: space-between;
-    gap:10px;
+    gap:7%;
     width: 100%;
     div{
         input{
-            width:100%;
+            width:97%;
             background-color: #F5F5F5;
         }
     } 
