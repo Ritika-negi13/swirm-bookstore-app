@@ -1,54 +1,76 @@
 .main{
-    margin-top: 160px;
-    margin-left: 30%;
-    width: 40%;
+  margin-top: 160px;
+  margin-left: 30%;
+  width: 40%;
 }
 div{
-    text-align: center;
+  text-align: center;
 }
-img{
-    height: px;
+
+.image-container img {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
 }
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Text color */
+  background-color: white; 
+  padding: 10px;
+  font-size: 1.5em; /* Adjust as needed */
+  text-align: center;
+}
+
 .bold{
-    font-weight:5px;
-    font-size:x-large;
-    color:black;
+  font-weight:bold;
+  font-size:x-large;
+  color:black;
 }
 p{
-    color:#9D9D9D;
-    font-size: 18px;
-    font-weight: 400;
+  color:black;
+  font-size: 18px;
+  font-weight: 400;
 }
 button{
-    background-color:darkblue;
-    border: 2px solid darkblue;
-    border-radius: 3px;
-    width:127px;
-    height: 33px;
-    color:white;
+  background-color:rgb(77, 77, 248);
+  border: 2px solid rgb(77, 77, 248);
+  border-radius: 3px;
+  width:200px;
+  height: 30px;
+  color:white;
 }
 table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+  width: 500px;
+  border-collapse: collapse;
+  text-align: center;
   
-  thead {
-    background-color: lightgrey;
-  }
-  
-  th, td {
-    padding: 8px;
-  }
-  
-  th {
-    border: none;
-  }
-  
-  tbody {
-    background-color: white;
-  }
-  
-  td {
-    border: 1px solid #ddd;
-  }
-  
+}
+
+thead {
+  background-color: rgb(232, 224, 224);
+}
+
+th, td {
+  padding: 12px;
+}
+
+th {
+  border: 2px;
+  font-weight: lighter;
+  font-size:0.7em;
+}
+
+tbody {
+  background-color: white;
+
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size:0.5em;
+
+}
