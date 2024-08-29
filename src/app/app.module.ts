@@ -10,22 +10,28 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCardModule} from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatFormFieldModule} from '@angular/material/form-field';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { LoginsignupComponent } from './components/loginsignup/loginsignup.component'; 
 import { MyorderComponent } from './components/myorder/myorder.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 import { BookcardComponent } from './components/bookcard/bookcard.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
+import { RouterModule } from '@angular/router';
+
+
 import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
@@ -39,7 +45,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     LoginsignupComponent,
     MyorderComponent,
     WishlistComponent,
-    BookcardComponent,ProfileComponent
+    BookcardComponent,
+    OrderPlacedComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -51,15 +59,14 @@ import { ProfileComponent } from './components/profile/profile.component';
     MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MaterialModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
+    RouterModule,
     FormsModule,
+    MatCardModule,
+    MatGridListModule,
+    MatDividerModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
