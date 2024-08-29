@@ -26,7 +26,7 @@ import { MyorderComponent } from './components/myorder/myorder.component';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 
-
+import { FormsModule } from '@angular/forms';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -57,6 +57,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule
   ],
   providers: [],
