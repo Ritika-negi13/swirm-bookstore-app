@@ -25,6 +25,7 @@ export class BookDetailsComponent {
       console.log(id);
     })
     this.bookdata.booksData.subscribe((book)=>{
+      this.book=[];
       this.book = book.filter((b:any)=>{
         if(b._id === this.bookId){
           return b;

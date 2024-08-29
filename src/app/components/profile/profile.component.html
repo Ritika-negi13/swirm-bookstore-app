@@ -1,26 +1,26 @@
 <div class="main">
     <div style="display: flex; gap:1%">
-        <p class="heading">Personal Details </p><a>Edit</a>
+        <p class="heading">Personal Details </p><a (click)="unablePersonalDetails()">Edit</a>
     </div>
     <div id="Personaldetails"> 
         <label>Full Name</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isDisabled">
         <br>
         <br>
         <label>Email Id</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isDisabled">
         <br>
         <br>
         <label>Password</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isDisabled">
         <br>
         <br>
         <label>Mobile Number</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isDisabled">
         <br>
         <br>
     </div>
