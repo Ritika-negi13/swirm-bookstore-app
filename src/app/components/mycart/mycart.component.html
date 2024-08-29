@@ -1,5 +1,5 @@
 <div class="mycart-container">
-    <div class="mycart">
+    <div class="mycart" >
         <div style="display: flex; justify-content: space-between;">
             <div class="mycart1"> 
                 <h3 style="font-weight: 500; font-size: 18px;">My cart (1)</h3>
@@ -23,28 +23,30 @@
                 </button>
             </div>
         </div>
-        <div style="display: flex; margin-left: 2%; height: 47%;">
-            <div class="image">
-                <img src="../../../assets/Image 11.png" alt="" style="height: 100%;">
-            </div>
-            <div class="details">
-                <h4 style="font-weight: 500;">Don't Make Me Think</h4>
-                <p style="font-size: 14px; color: #9D9D9D;">by Steve Krug</p>
-                <p style="font-size: 14px; font-weight: 500;">Rs. 1500 <span style="color: #9D9D9D; font-size: 10px; margin-left: 2px;"><s>Rs.2000</s></span></p>
-                <div style="display: flex; justify-content: space-between; width: 50%;">
-                    <div style="display: flex; gap: 10px; ">
-                        <button class="btn" (click)="decValue()" [disabled]="cartValue === 1" >–</button>
-                        <div class = "item"><span>{{cartValue}}</span></div>
-                        <button class="btn" (click)="incValue()"><img src="../../../assets/plus.svg" alt=""></button>
-                    </div>
-                    <div>
-                        <div style="margin-left: 24px;font-size: 13px; font-weight: 500;">Remove</div>
+        <div class="scroll">
+            <div style="display: flex; margin-left: 2%; height: 47%; margin-top: 2px; margin-bottom: 56px;" *ngFor="let book of cartItems">
+                <div class="image">
+                    <img src="../../../assets/Image 11.png" alt="" style="height: 100%;">
+                </div>
+                <div class="details">
+                    <h4 style="font-weight: 500;">{{book.product_id.bookName}}</h4>
+                    <p style="font-size: 14px; color: #9D9D9D;">by {{book.product_id.author}}</p>
+                    <p style="font-size: 14px; font-weight: 500;">Rs. {{book.product_id.discountPrice}} <span style="color: #9D9D9D; font-size: 10px; margin-left: 2px;"><s>Rs. {{book.product_id.price}}</s></span></p>
+                    <div style="display: flex; justify-content: space-between; width: 50%;">
+                        <div style="display: flex; gap: 10px; ">
+                            <button class="btn" (click)="decValue()" [disabled]="cartValue === 1" >–</button>
+                            <div class = "item"><span>{{book.quantityToBuy}}</span></div>
+                            <button class="btn" (click)="incValue()"><img src="../../../assets/plus.svg" alt=""></button>
+                        </div>
+                        <div>
+                            <div style="margin-left: 24px;font-size: 13px; font-weight: 500;">Remove</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div style="display: flex; justify-content: end; margin-right: 30px; margin-bottom: 2px;" *ngIf="!isFormContainerVisible">
-            <button class = "btn" style="background-color: #3371B5; color: white; width: 151px; height: 35px; border-radius: 2px; cursor: pointer;" (click)="formFunction()">PLACE ORDER</button>
+            <button class = "btn" style="background-color: #3371B5; color: white; width: 151px; height: 35px; border-radius: 2px; cursor: pointer; margin-bottom: 10px;" (click)="formFunction()">PLACE ORDER</button>
         </div>
     </div>
 </div>

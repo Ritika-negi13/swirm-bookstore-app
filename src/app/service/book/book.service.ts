@@ -8,17 +8,24 @@ import { HttpHeaders } from '@angular/common/http';
 export class BookService {
   /*******************************************************/
   //this part is for the admin login
-  access_token = localStorage.getItem('admin_accesstoken');
+  admin_access_token = localStorage.getItem('admin_accesstoken');
   getOrderBooks(url: any) {
     const myHeaders = new Headers();
-    myHeaders.append('x-access-token', `${this.access_token}`);
+    myHeaders.append('x-access-token', `${this.admin_access_token}`);
     return this.http.getService(url, true, { headers: myHeaders });
   }
   /*******************************************************/
   baseurl = 'get/book';
+  access_token = localStorage.getItem('acesstoken');
   constructor(private http: HttpService) {}
 
   getBooks = () => {
     return this.http.getService(this.baseurl, false, null);
+  };
+
+  getCartBooks = (url : any) => {
+    const myHeaders = new Headers();
+    myHeaders.append('x-access-token', `${this.access_token}`);
+    return this.http.getCartItems(url, true, { headers: myHeaders });
   };
 }
