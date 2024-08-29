@@ -8,13 +8,13 @@ import { HttpHeaders } from '@angular/common/http';
 export class BookService {
   /*******************************************************/
   //this part is for the admin login
-  access_token = localStorage.getItem('admin_acesstoken');
+  access_token = localStorage.getItem('admin_accesstoken');
   getOrderBooks(url: any) {
     const myHeaders = new Headers();
     myHeaders.append('x-access-token', `${this.access_token}`);
     return this.http.getService(url, true, { headers: myHeaders });
   }
-/*******************************************************/
+  /*******************************************************/
   baseurl = 'get/book';
   constructor(private http: HttpService) {}
 
