@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BookService } from 'src/app/service/book/book.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mycart',
@@ -11,23 +12,40 @@ export class MycartComponent {
   isOrderSummaryVisible = false;
   isFormContainerVisible = false;
   cartItems : any = [];
+  isLogin = false;
+  isEdit = true;
+  
 
-  constructor(private book:BookService){ }
+  constructor(private book:BookService, private router:Router){ }
 
   ngOnInit(){
+
+    if(localStorage.getItem('acesstoken')){
+      this.isLogin = true;
+    } else {
+      this.isLogin = false;
+    }
+
     this.book.getCartBooks('/get_cart_items').subscribe({
       next: (data:any) => {
         console.log('cart:',data.result);
         this.cartItems = data.result;
+        //  console.log(this.cartItems[0].user_id.fullName);
+        localStorage.setItem('user', this.cartItems[0].user_id);
       },
       error: (error) => {
         console.log(error);
       }
     })
+   
   }
 
   formFunction() {
-    this.isFormContainerVisible = !this.isFormContainerVisible;
+    if(localStorage.getItem('acesstoken')){
+      this.isFormContainerVisible = !this.isFormContainerVisible;
+    } else {
+      this.router.navigate(['/loginsignup']);
+    }
   }
 
   orderFunction() {
@@ -47,6 +65,9 @@ export class MycartComponent {
           console.log(error);
         },
       });
+  }
+  edit() {
+    this.isEdit = !this.isEdit;
   }
   decValue(ind : any) {
     if (this.cartItems[ind].quantityToBuy > 1) {

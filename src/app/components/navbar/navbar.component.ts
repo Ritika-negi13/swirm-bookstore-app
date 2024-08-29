@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { BookService } from 'src/app/service/book/book.service';
 import { HttpService } from 'src/app/service/http/http.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { HttpService } from 'src/app/service/http/http.service';
 })
 export class NavbarComponent {
 
-  constructor(private router: Router, private http:HttpService) { }
+  constructor(private router: Router, private http:HttpService, private book:BookService) { }
   isLoggedIn=false;
   showdialog = false;
   ngOnInit(){
@@ -29,6 +30,18 @@ export class NavbarComponent {
       }
     });
 
+    /*******************************************************************************/
+    /*******************************************************************************/
+    //please do not remove this code, this is for save user id
+    this.book.getCartBooks('/get_cart_items').subscribe({
+      next: (data: any) => {
+        console.log('user', data.result[0].user_id._id);
+        localStorage.setItem('userId', data.result[0].user_id._id);
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
     /*******************************************************************************/
     console.log(localStorage.getItem('acesstoken'));
     if (localStorage.getItem('acesstoken')) {
