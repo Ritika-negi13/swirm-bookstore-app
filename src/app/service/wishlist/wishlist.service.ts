@@ -6,12 +6,26 @@ import { HttpService } from '../http/http.service';
 })
 export class WishlistService {
 
-  constructor(private http:HttpService) { }
-  
-  getWishlist=(url:any)=>{
-    let auth_token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdhMDkzY2VhZTVjNDAwMGVkMGVkMDIiLCJpYXQiOjE3MjQ3Njc0MjEsImV4cCI6MTcyNDg1MzgyMX0.AvIOU9yTN2nKixTaVnJC4oHtGM-_oHlRhYVPU0rvh0A';
+  constructor(private http: HttpService) { }
+
+  getWishlist = (url: any) => {
+    let auth_token: any = localStorage.getItem("acesstoken");
     const myHeaders = new Headers();
     myHeaders.append("x-access-token", `${auth_token}`);
-    return this.http.getService(url,true,{headers:myHeaders});
+    return this.http.getService(url, true, { headers: myHeaders });
+  }
+
+  addToWishlist = (url: any, param:any) => {
+    let auth_token: any = localStorage.getItem("acesstoken");
+    const myHeaders = new Headers();
+    myHeaders.append("x-access-token", `${auth_token}`);
+    return this.http.postService(url+`/${param}`,null,true,{headers:myHeaders});
+  }
+
+  deleteFromWishlist=(url:any,param:any)=>{
+    let auth_token: any = localStorage.getItem("acesstoken");
+    const myHeaders = new Headers();
+    myHeaders.append("x-access-token", `${auth_token}`);
+    return this.http.deleteService(url+`/${param}`,true,{headers:myHeaders});
   }
 }
