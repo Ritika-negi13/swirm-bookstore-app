@@ -25,7 +25,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
-import { SearchPipe } from './service/custom-pipes.pipe';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -38,8 +38,7 @@ import { SearchPipe } from './service/custom-pipes.pipe';
     WishlistComponent,
     PleaseloginComponent,
     BookcardComponent,
-    OrderPlacedComponent,
-    SearchPipe
+    OrderPlacedComponent
   ],
   imports: [
     BrowserModule,
@@ -51,10 +50,16 @@ import { SearchPipe } from './service/custom-pipes.pipe';
     MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
+    MaterialModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    Router,
+    FormsModule,
     MatCardModule,
-    FormsModule
+    MatGridListModule,
+    MatDividerModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
