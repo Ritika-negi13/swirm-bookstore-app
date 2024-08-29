@@ -20,7 +20,7 @@ export class BookService {
   constructor(private http: HttpService) {}
 
   getBooks = () => {
-    return this.http.getService(this.baseurl, false, null);
+    return this.http.getService('/'+this.baseurl, false, null);
   };
 
   getCartBooks = (url : any) => {
@@ -40,4 +40,6 @@ export class BookService {
     myHeaders.append('x-access-token', `${this.access_token}`);
     return this.http.editQuantity(id, data, '/cart_item_quantity/', true, { headers: myHeaders });
   }
+
+
 }

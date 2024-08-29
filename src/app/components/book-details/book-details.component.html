@@ -1,35 +1,35 @@
-<div class="book-details">
+<div class="book-details" *ngIf="mayrender">
     <div class="small-image-left">
         <div class="small-image-div">
-            <img src={{book[0].imgPath}}>
+            <img src={{book.bookImage}}>
         </div>
         <div class="small-image-div">
-            <img src={{book[0].imgPath}}>
+            <img src={{book.bookImage}}>
         </div>
     </div>
     <div class="large-image-div">
         <div class="large-image">
-            <img width="281px" height="367px" src={{book[0].imgPath}}>
+            <img width="281px" height="367px" src={{book.bookImage}}>
         </div>
         <div class="buttons">
-            <button mat-raised-button (click)="addToCart()"  >ADD TO BAG</button>
+            <button mat-raised-button (click)="addToCart()" >ADD TO BAG</button>
             <button mat-raised-button (click)="addToWishlist()"><mat-icon>favorite</mat-icon>WISHLIST</button>
         </div>
     </div>
     <div class="right-content">
         <div class="right-content-top">
-            <p style="font: normal normal normal 28px/37px Roboto;">{{book[0].bookName}}</p>
-            <p style="font: normal normal normal 18px/24px Roboto; color: #878787;">by {{book[0].author}}</p>
+            <p style="font: normal normal normal 28px/37px Roboto;">{{book.bookName}}</p>
+            <p style="font: normal normal normal 18px/24px Roboto; color: #878787;">by {{book.author}}</p>
             <div class="rating-discount">
                 <div class="rating">
                     <p style="margin-left: 8px;">4.5</p>
                     <p><mat-icon style="font-size: 15px; margin-top: 15px; margin-left: 3px;">star</mat-icon></p>
                 </div>
-                <p style="margin-top: 2%; margin-left: 2%; color: #878787;">({{book[0].quantity}})</p>
+                <p style="margin-top: 2%; margin-left: 2%; color: #878787;">({{book.quantity}})</p>
             </div>
             <div class="price">
-                <p>Rs. {{book[0].discountPrice}}</p>
-                <p style="text-decoration:line-through; color: #878787">Rs. {{book[0].price}}</p>
+                <p>Rs. {{book.discountPrice}}</p>
+                <p style="text-decoration:line-through; color: #878787">Rs. {{book.price}}</p>
             </div>
         </div>
         <div class="right-content-center">
