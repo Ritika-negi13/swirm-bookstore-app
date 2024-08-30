@@ -16,7 +16,7 @@ export class BookdataService {
   //for book-details getting book id
   bookId = new BehaviorSubject('');
 
-
+  search= new BehaviorSubject('');
   constructor(private https: HttpService) { }
 
   getBook(): any {
@@ -44,4 +44,7 @@ export class BookdataService {
     localStorage.setItem("bookId",id);
   }
 
+  updateSearch(val:any){
+    this.search.next(val);
+  }
 }

@@ -29,6 +29,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
+import { SearchPipe } from './pipe/search.pipe';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     LoginsignupComponent,
     MyorderComponent,
     WishlistComponent,
-    BookcardComponent,ProfileComponent
+    BookcardComponent,ProfileComponent, SearchPipe
   ],
   imports: [
     BrowserModule,

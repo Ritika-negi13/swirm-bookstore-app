@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { BookdataService } from 'src/app/service/bookdata/bookdata.service';
 import { HttpService } from 'src/app/service/http/http.service';
 
 @Component({
@@ -10,9 +11,10 @@ import { HttpService } from 'src/app/service/http/http.service';
 })
 export class NavbarComponent {
 
-  constructor(private router: Router, private http:HttpService) { }
+  constructor(private router: Router, private http:HttpService,private bookdata:BookdataService) { }
   isLoggedIn=false;
   showdialog = false;
+  search='';
   ngOnInit(){
     /*******************************************************************************/
     //please do not remove this code, this is for admin login
@@ -56,5 +58,9 @@ export class NavbarComponent {
   logout=()=>{
     localStorage.removeItem("acesstoken");
     window.location.reload();
+  }
+  onSearch(){
+    this.bookdata.updateSearch(this.search);
+    
   }
 }

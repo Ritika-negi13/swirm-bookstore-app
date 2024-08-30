@@ -8,7 +8,7 @@
 
         <div class="search">
             <div><mat-icon class="src-icon">search</mat-icon></div>
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" name="search" [(ngModel)]="search" (keyup)="onSearch()">
         </div>
 
         <span class="example-spacer"></span>
