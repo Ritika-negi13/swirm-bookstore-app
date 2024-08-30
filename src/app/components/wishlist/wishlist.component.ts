@@ -20,7 +20,7 @@ export class WishlistComponent implements OnInit {
         this.wislistLength=this.wishlistItems.length;
         console.log(this.wishlistItems)
       },
-      error:(err:any)=>console.log(err),
+      error:(err:Error)=>console.log(err),
       complete:()=>{}
     })
   }

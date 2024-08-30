@@ -22,6 +22,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { LoginsignupComponent } from './components/loginsignup/loginsignup.component'; 
 import { MyorderComponent } from './components/myorder/myorder.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component'; 
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
@@ -40,11 +42,13 @@ import { ProfileComponent } from './components/profile/profile.component';
     AppComponent,
     BookDetailsComponent,
     DashboardComponent,
-    NavbarComponent,
     MycartComponent,
+    NavbarComponent,
     PleaseloginComponent,
     LoginsignupComponent,
     MyorderComponent,
+    PleaseloginComponent,
+    BreadcrumbComponent,
     WishlistComponent,
     BookcardComponent,
     OrderPlacedComponent,
