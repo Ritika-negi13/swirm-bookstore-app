@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { BookService } from 'src/app/service/book/book.service';
 import { BookdataService } from 'src/app/service/bookdata/bookdata.service';
@@ -21,7 +22,7 @@ export class BookDetailsComponent {
   stars = [false, false, false, false, false];
   comment: string = '';
   constructor(private bookService: BookService, private bookdata: BookdataService, private feedbackService: FeedbackService,
-    private wishlistService: WishlistService, private router: Router, private cartService: CartService
+    private wishlistService: WishlistService, private router: Router, private cartService: CartService, private snackBar:MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -85,9 +86,17 @@ export class BookDetailsComponent {
         next: (res: any) => {
           console.log(res);
           if (res.message == 'Product item is already in wish list') {
-            console.log("product is already in list");
+            this.snackBar.open("Product item is already in wish list",'close',{
+              duration:2000
+            })
           }
-          else this.router.navigate(['/wishlist']);
+          else {
+            this.snackBar.open("added to wishlist",'close',{
+              duration:2000
+            });
+            this.router.navigate(['/wishlist']);
+          }
+            
         },
         error: (err) => console.log(err),
         complete: () => { }
@@ -104,9 +113,15 @@ export class BookDetailsComponent {
         next: (res: any) => {
           console.log(res);
           if (res.message == 'Product item is already added, increase the item count') {
-            console.log("Product item is already added, increase the item count");
+            this.snackBar.open("Product item is already added, increase the item count",'close',{
+              duration:2000
+            });
           }
-          else this.router.navigate(['/cart'])
+          else {
+            this.snackBar.open("added to cart",'close',{
+              duration:2000
+            })
+          }this.router.navigate(['/cart'])
         },
         error: (err: any) => console.log(err),
         complete: () => { }

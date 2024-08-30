@@ -19,6 +19,7 @@ export class NavbarComponent {
   showdialog = false;
   search='';
   cartNo = 0;
+  username:any;
   constructor(
     private router: Router,
     private http: HttpService,
@@ -33,6 +34,7 @@ export class NavbarComponent {
     );
   }
   ngOnInit(){
+    if(localStorage.getItem("username")) this.username=localStorage.getItem("username")?.split('@')[0]; 
     /*******************************************************************************/
     //please do not remove this code, this is for admin login
     this.http
@@ -89,6 +91,7 @@ export class NavbarComponent {
 
   logout = () => {
     localStorage.removeItem('acesstoken');
+    localStorage.removeItem('username');
     window.location.reload();
   }
   onSearch(){

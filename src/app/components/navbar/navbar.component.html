@@ -29,7 +29,7 @@
     <div *ngIf="showdialog" class="dialog-box">
         <div style=" width: 81px; height: 10px; border-radius: 3px; background: #FFFFFF 0% 0% no-repeat padding-box; top: 56px;left: 80%;"></div>
         <div *ngIf="isLoggedIn" class="dialog-authenticated">
-            <p>Hello Poonam,</p>
+            <p>Hello {{username}},</p>
             <div class="profile" (click)="openProfile()">
                 <mat-icon>person_outline</mat-icon>
                 <p>Profile</p>
