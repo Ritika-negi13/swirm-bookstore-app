@@ -1,12 +1,14 @@
 .mycart-container {
     margin-left: 13%;
     margin-top: 1%;
-    
+
 }
+
 .cart-length {
     display: flex;
     justify-content: space-between;
 }
+
 .address-details {
     margin-left: 13%;
     margin-top: 2%;
@@ -18,6 +20,7 @@
     padding-top: 1%;
     padding-bottom: 9px;
 }
+
 .order-details {
     margin-left: 13%;
     margin-top: 2%;
@@ -29,23 +32,28 @@
     padding-top: 1%;
     padding-bottom: 9px;
 }
+
 .order-summary {
     margin-left: 13%;
     margin-top: 2%;
-    
+
 }
+
 .image {
     width: 100px;
     height: 100%;
 }
+
 .details {
     margin-left: 20px;
 }
+
 .scroll {
     overflow-y: auto;
     height: 300px;
     margin-bottom: 10px;
 }
+
 .mycart {
     width: 63.3%;
     height: auto;
@@ -55,9 +63,11 @@
     border: 1px solid #0e0e0e;
     //opacity: 0.24;
 }
+
 .mycart1 {
     margin: 2% 2%;
 }
+
 .dropbtn {
     width: 250px;
     height: auto;
@@ -71,6 +81,7 @@
     gap: 10px;
     background-color: #FFFFFF;
 }
+
 .dropdown-toggle::after {
     display: inline-block;
     margin-top: 4px;
@@ -83,14 +94,16 @@
     border-bottom: 0;
     border-left: 9.5px solid transparent;
 }
+
 .btn {
     border-radius: 50%;
     width: 24px;
     height: 24px;
     border: 1px solid #DCDCDC;
     font-weight: 700;
-    
+
 }
+
 .btn1 {
     background-color: #3371B5;
     color: white;
@@ -100,11 +113,13 @@
     cursor: pointer;
     margin-bottom: 10px;
 }
+
 .use-location {
     margin-top: 2px;
     font-weight: 500;
     font-size: 14px;
 }
+
 .item {
     display: flex;
     width: 30px;
@@ -114,6 +129,7 @@
     border-radius: 3px;
     padding-left: 15px;
 }
+
 .form-container {
     max-width: 52.4%;
     margin-left: 13%;
@@ -125,13 +141,16 @@
     margin-top: 2%;
     margin-right: 31.5%;
 }
+
 .add-address {
     margin-bottom: 20px;
 }
+
 .content {
     margin-right: 23%;
     margin-left: 5%;
 }
+
 .form-group {
     display: flex;
     justify-content: normal;
@@ -187,87 +206,106 @@
     border-radius: 2px;
     margin-bottom: 2%;
 }
+
 .type-options {
     display: flex;
     gap: 20%;
     margin-bottom: 15px;
 }
+
 .address-cont {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
 }
+
 .book-data {
     display: flex;
-        margin-left: 2%;
-        height: 47%;
-        margin-top: 2px;
-        margin-bottom: 56px;
+    margin-left: 2%;
+    height: 47%;
+    margin-top: 2px;
+    margin-bottom: 56px;
 }
+
 .quantity {
     display: flex;
     justify-content: space-between;
     width: 50%;
 }
+
 .place-btn {
     display: flex;
     justify-content: end;
     margin-right: 30px;
     margin-bottom: 2px;
 }
+
 .edit-quantity {
     display: flex;
     gap: 10px;
 }
+
 .customer {
     display: flex;
     justify-content: space-between;
 }
 
 @media screen and (max-width: 600px) {
+    .main {
+        width: 100%;
+    }
+
     .cart-length {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
     }
+
     .location {
         margin-bottom: 11%;
         margin-left: 5%;
     }
+
     .quantity {
         display: block;
+
         .remove {
             margin-top: 10px;
             margin-left: 8px;
         }
     }
+
     .place-btn {
         display: flex;
         justify-content: center;
         margin-right: 0px;
     }
-    
+
     .details {
         margin-bottom: 20px;
     }
+
     .customer {
         display: flex;
         flex-direction: column;
         align-content: space-around;
         flex-wrap: wrap;
     }
+
     .form-group {
         display: flex;
         flex-direction: column;
     }
+
     .form-container {
         margin-right: 32%;
     }
+
     .btn2 {
         display: flex;
         justify-content: center;
         margin-right: 33px;
     }
-    
-    
+
+
 }
