@@ -28,7 +28,7 @@
                 </span>
             </div> -->
             <button mat-button class="nav-icon" [routerLink]="['/cart']">
-                <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; flex-direction: column;" (click)="cart()">
                     <mat-icon svgIcon="cart" style="height:30px; width : 30px;" matBadge="{{cartNo}}"></mat-icon>
                     <!-- <img src="../../../assets/cart.svg" alt="" height="30px" width="30px" matBadge="15"> -->
                     <span>Cart</span>
