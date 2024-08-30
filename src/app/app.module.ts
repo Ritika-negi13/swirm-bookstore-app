@@ -10,6 +10,16 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MatBadgeModule } from '@angular/material/badge';
+
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component'; 
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+
+import { BookcardComponent } from './components/bookcard/bookcard.component';
+
 
 
 import {MatIconModule} from '@angular/material/icon';
@@ -19,19 +29,16 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatFormFieldModule} from '@angular/material/form-field';
-<<<<<<< HEAD
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { LoginsignupComponent } from './components/loginsignup/loginsignup.component'; 
-import { ReactiveFormsModule } from '@angular/forms';
-=======
 import { MyorderComponent } from './components/myorder/myorder.component';
 
+import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
+import { RouterModule } from '@angular/router';
 
-import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component'; 
 
-import { BookcardComponent } from './components/bookcard/bookcard.component';
->>>>>>> 0960009d2a138bed32216d06a0277ece42d8ef05
+
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -40,15 +47,13 @@ import { BookcardComponent } from './components/bookcard/bookcard.component';
     DashboardComponent,
     MycartComponent,
     NavbarComponent,
-<<<<<<< HEAD
-    PleaseloginComponent,
-    LoginsignupComponent
-=======
     MyorderComponent,
     WishlistComponent,
     PleaseloginComponent,
-    BookcardComponent
->>>>>>> 0960009d2a138bed32216d06a0277ece42d8ef05
+    BookcardComponent,
+    ProfileComponent,
+    OrderPlacedComponent,
+    LoginsignupComponent
   ],
   imports: [
     BrowserModule,
@@ -60,12 +65,15 @@ import { BookcardComponent } from './components/bookcard/bookcard.component';
     MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MaterialModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule
+    RouterModule,
+    FormsModule,
+    MatCardModule,
+    MatGridListModule,
+    MatDividerModule,
+    ReactiveFormsModule,
+    MatBadgeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

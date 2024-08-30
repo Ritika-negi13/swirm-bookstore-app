@@ -10,7 +10,7 @@ import { WishlistService } from 'src/app/service/wishlist/wishlist.service';
 export class WishlistComponent implements OnInit {
   wishlistItems:any=[];
   wislistLength:number=0;
-  constructor(private wishListService:WishlistService){}
+  constructor(private wishListService:WishlistService, private wishlistService:WishlistService){}
   ngOnInit(): void {
     this.wishListService.getWishlist('/get_wishlist_items').subscribe({
       next:(res:any)=>{
@@ -20,8 +20,19 @@ export class WishlistComponent implements OnInit {
         this.wislistLength=this.wishlistItems.length;
         console.log(this.wishlistItems)
       },
-      error:(err)=>console.log(err),
+      error:(err:Error)=>console.log(err),
       complete:()=>{}
+    })
+  }
+
+  deleteFromWishlist=(param:any)=>{
+    this.wishlistService.deleteFromWishlist('/remove_wishlist_item',param).subscribe({
+      next:(res:any)=>{
+        console.log(res);
+        window.location.reload();
+      },
+      error:(err:any)=>console.log(err),
+      complete(){}
     })
   }
   

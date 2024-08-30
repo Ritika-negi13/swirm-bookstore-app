@@ -5,12 +5,35 @@
     flex-direction: row;
     align-items: center;
 }
+<<<<<<< HEAD
 .toggle{
     display: flex;
     justify-content: space-between;
 }
 .lsbox{
     width:40%;
+=======
+.image{
+    width:38%;
+    height:auto;
+}
+.line{
+    color:#A03037;
+    padding:2px;
+    background-color: #A03037;
+    width:70%;
+}
+.toggle{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 6.5%;
+    padding-right: 4%;
+}
+.lsbox{
+    width:40%;
+    height:auto;
+    cursor: pointer;
+>>>>>>> b347d65f2a4cc08d1202c29e5508fcc6bd0d3c10
 }
 img{
     height: 90%;
@@ -41,10 +64,22 @@ input{
     justify-content: space-between;
     flex-direction: row;
     height:35px;
+<<<<<<< HEAD
+=======
+    padding-bottom: 10px;
+>>>>>>> b347d65f2a4cc08d1202c29e5508fcc6bd0d3c10
 }
 .loginform{
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
+=======
+    padding-bottom: 10px;
+}
+.signupForm{
+    display: flex;
+    flex-direction: column;
+>>>>>>> b347d65f2a4cc08d1202c29e5508fcc6bd0d3c10
 }
 .form{
     display: flex;
@@ -53,7 +88,11 @@ input{
 }
 .active{
     font-size: 20px;
+<<<<<<< HEAD
     padding: 10px;
+=======
+    padding-top: 10px;
+>>>>>>> b347d65f2a4cc08d1202c29e5508fcc6bd0d3c10
 }
 button{
     width:90%;
@@ -62,6 +101,10 @@ button{
     margin-left: 7%;
     background-color: #A03037;
     border: #A03037;
+<<<<<<< HEAD
+=======
+    color:#E4E4E4;
+>>>>>>> b347d65f2a4cc08d1202c29e5508fcc6bd0d3c10
 }
 #Facebook{
     background-color:#4266B2;
@@ -71,6 +114,10 @@ button{
 #Google{
     background-color: #F5F5F5;
     border: solid #E4E4E4;
+<<<<<<< HEAD
+=======
+    color:black;
+>>>>>>> b347d65f2a4cc08d1202c29e5508fcc6bd0d3c10
 }
 ::ng-deep.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix{
   padding-top: 5px !important;
@@ -83,4 +130,16 @@ button{
 }
 .inputfield{
     margin-bottom: 0px;
+<<<<<<< HEAD
+=======
+}
+@media only screen and (max-width: 750px) {
+    .image{
+        display: none;
+    }
+    .lsbox{
+        width:80%;
+        height:auto;
+    }
+>>>>>>> b347d65f2a4cc08d1202c29e5508fcc6bd0d3c10
 }
