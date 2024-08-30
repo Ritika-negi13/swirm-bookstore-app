@@ -16,6 +16,12 @@
     display: flex; 
     gap: 5px;
 }
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 .order-details {
     display: flex;

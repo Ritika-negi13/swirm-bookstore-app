@@ -2,6 +2,9 @@
     <span routerLink="" style="color: #E2E2E2; cursor: pointer;">Home / </span><span
         style="color: black;">My order</span>
 </div>
+<div *ngIf="isLoading" class="spinner">
+    <mat-spinner ></mat-spinner>
+</div>
 <div class="orders" *ngFor="let book of orderBooks">
     <mat-card class="card">
         <div class="order">
