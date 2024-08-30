@@ -1,6 +1,6 @@
 <div>
     <mat-toolbar class="navbar">
-        <div class="logo">
+        <div class="logo" [routerLink]="['']" style="cursor: pointer;">
             <div style="padding-right: 7px;"><img src="../../../assets/logo.svg" alt="i"></div>
             <span>Bookstore</span>
         </div>
@@ -8,12 +8,16 @@
         <span class="example-spacer"></span>
         <div class="nav-btn">
             <button mat-button class="nav-icon" (click)="openProfile()">
+            </button>
+        </div>
+        <div class="nav-btn" >
+            <button mat-button class="nav-icon" (click)="toggle()">
                 <div style="display: flex; flex-direction: column;">
                     <img src="../../../assets/profile.svg" alt="" height="30px" width="30px" style="margin-left: 10px;">
                     <span>Profile</span>
                 </div>
             </button>
-            <button mat-button class="nav-icon" routerLink="/dashboard/mycart/order-placed">
+            <button mat-button class="nav-icon" [routerLink]="['/cart']">
                 <div style="display: flex; flex-direction: column;">
                     <img src="../../../assets/cart.svg" alt="" height="30px" width="30px">
                     <span>Cart</span>
@@ -21,4 +25,41 @@
             </button>
         </div>
     </mat-toolbar>
+</div>
+<div>
+    <div *ngIf="showdialog" class="dialog-box">
+        <div style=" position: absolute; width: 81px; height: 10px; border-radius: 3px; background: #FFFFFF 0% 0% no-repeat padding-box; top: 56px;
+left: 990px; z-index: 10;"></div>
+        <div *ngIf="isLoggedIn" class="dialog-authenticated">
+            <p>Hello Poonam,</p>
+            <div class="profile" (click)="openProfile()">
+                <mat-icon>person_outline</mat-icon>
+                <p>Profile</p>
+            </div>
+            <div class="my_orders" (click)="openorders()" >
+                <mat-icon>markunread_mailbox_outline</mat-icon>
+                <p>My Orders</p>
+            </div>
+            <div class="wishlist" (click)="openwishlist()">
+                <mat-icon>favorite_outline</mat-icon>
+                <p>My Wishlist</p>
+            </div>
+            <button mat-button (click)="logout()">Logout</button>
+        </div>
+        <div *ngIf="!isLoggedIn"  class="dialog-not-authenticated">
+            <div class="welcome-login-signup">
+                <p>Welcome</p>
+                <p>To access account and manage orders</p>
+                <button mat-button [routerLink]="['/loginsignup']">LOGIN/SIGNUP</button>
+            </div>
+            <div class="my_orders" [routerLink]="['/pleaselogin']" >
+                <mat-icon>markunread_mailbox_outline</mat-icon>
+                <p>My Orders</p>
+            </div>
+            <div class="wishlist" [routerLink]="['/pleaselogin']">
+                <mat-icon>favorite_outline</mat-icon>
+                <p>My Wishlist</p>
+            </div>
+        </div>
+    </div>
 </div>

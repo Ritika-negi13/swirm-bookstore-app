@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 export class OrderPlacedComponent {
   constructor(private router: Router){}
   onBtnClick(){
-    this.router.navigate(['/bookcard'])
+    this.router.navigate(['/'])
   }
 
 }

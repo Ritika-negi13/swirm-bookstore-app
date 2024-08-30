@@ -25,6 +25,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
+import { ProfileComponent } from './components/profile/profile.component'; // Add this line
 import { RouterModule } from '@angular/router'; // Correct import
 import { SearchPipe } from './service/search.pipe';
 
@@ -40,6 +41,7 @@ import { SearchPipe } from './service/search.pipe';
     PleaseloginComponent,
     BookcardComponent,
     OrderPlacedComponent,
+    ProfileComponent, // Add this line
     SearchPipe
   ],
   imports: [

@@ -1,71 +1,85 @@
 <div class="main">
-    <div style="display: flex; gap:1%">
-        <p class="heading">Personal Details </p><a>Edit</a>
+    <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex;gap:3px;">
+            <p class="heading">Personal Details </p><a (click)="unableEditing()">Edit</a>
+        </div>
+        <div *ngIf="isPDisabled" >
+            <button style="padding: 7px 15px 7px 15px ; margin-right: 0px;" (click)="unableEditing()">Save</button> 
+        </div>
     </div>
     <div id="Personaldetails"> 
         <label>Full Name</label>
         <br>
-        <input type="text">
+        <input type="text" name="name" [(ngModel)]="name" [disabled]="!isPDisabled" placeholder={{name}}>
         <br>
         <br>
         <label>Email Id</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isPDisabled" placeholder={{email}}>
         <br>
         <br>
         <label>Password</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isPDisabled" placeholder={{password}}>
         <br>
         <br>
         <label>Mobile Number</label>
         <br>
-        <input type="text">
+        <input type="text" [disabled]="!isPDisabled" placeholder={{phone}}>
         <br>
         <br>
     </div>
     <div class="addheader">
         <p class="heading">Address</p>
-        <button>Add New Address</button>
+        <button (click)="addnew()">Add New Address</button>
     </div>
+    <br>
     <div>
-        <div style="display: flex; gap:3%">
-            <p style="font-weight: 600;">1.Work</p>
-            <a>Edit</a>
-        </div>
-        <div>
-            <label>Address</label>
-            <br>
-            <input type="text"> 
-            <br>
-            <br>
-            <div id="addressdiv">
-                <div>
-                    <label>City/town</label>
-                    <br>
-                    <input type="text">
+        <div *ngFor="let add of addresses ">
+            <div style="display: flex; justify-content: space-between;" >
+                <div style="display: flex; gap:10px;">
+                    <p style="font-weight: 600;">{{addresses.indexOf(add)+1}}.{{add.type}}</p>
+                    <a (click)="unableAddress(add)">Edit</a>
                 </div>
-                <div>
-                    <label>State</label>
-                    <br>
-                    <input type="text">
-                </div>  
+                <div *ngIf="add.isADisabled" >
+                    <button style="padding: 7px 15px 7px 15px ; margin-right: 0px;" (click)="unableAddress(add)">Save</button> 
+                </div>
+            </div>
+            <div>
+                <label>Address</label>
+                <br>
+                <input type="text" [disabled]="!add.isADisabled" name="add.address" [(ngModel)]="add.address" placeholder={{add.address}}> 
+                <br>
+                <br>
+                <div id="addressdiv">
+                    <div>
+                        <label>City/town</label>
+                        <br>
+                        <input type="text" [disabled]="!add.isADisabled"  name="add.city" [(ngModel)]="add.city" placeholder={{add.city}}>
+                    </div>
+                    <div>
+                        <label>State</label>
+                        <br>
+                        <input type="text" [disabled]="!add.isADisabled"  name="add.state" [(ngModel)]="add.state" placeholder={{add.state}}>
+                    </div>  
+                </div>
+                <br>
+                <div class="radio" *ngIf="add.isADisabled" >
+                    <div>
+                        <input type="radio" name="add.type" value="Home" [(ngModel)]="add.type" [disabled]="!add.isADisabled">
+                        <label for="home">Home</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="add.type" value="Work"  [(ngModel)]="add.type" [disabled]="!add.isADisabled">
+                        <label for="work">Work</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="add.type" value="Other"  [(ngModel)]="add.type" [disabled]="!add.isADisabled">
+                        <label for="other">Other</label>
+                    </div> 
+                </div>
             </div>
             <br>
-            <div class="radio">
-                <div>
-                    <input type="radio" id="home" name="type" value="home">
-                    <label for="home">Home</label>
-                </div>
-                <div>
-                    <input type="radio" id="work" name="type" value="work">
-                    <label for="work">Work</label>
-                </div>
-                <div>
-                    <input type="radio" id="other" name="type" value="other">
-                    <label for="other">Other</label>
-                </div> 
-            </div>
         </div>
     </div>
 </div>
