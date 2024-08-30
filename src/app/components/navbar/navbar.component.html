@@ -4,14 +4,15 @@
             <div style="padding-right: 7px;"><img src="../../../assets/logo.svg" alt="i"></div>
             <span>Bookstore</span>
         </div>
-
-
         <div class="search">
             <div><mat-icon class="src-icon">search</mat-icon></div>
             <input type="text" placeholder="Search" name="search" [(ngModel)]="search" (keyup)="onSearch()">
         </div>
-
         <span class="example-spacer"></span>
+        <div class="nav-btn">
+            <button mat-button class="nav-icon" (click)="openProfile()">
+            </button>
+        </div>
         <div class="nav-btn" >
             <button mat-button class="nav-icon" (click)="toggle()">
                 <div style="display: flex; flex-direction: column;">
@@ -19,17 +20,26 @@
                     <span>Profile</span>
                 </div>
             </button>
+            <!-- <div class="demo-section">
+                <mat-icon matBadge="14">home</mat-icon> -->
+                <!-- Include text description of the icon's meaning for screen-readers -->
+                <!-- <span class="cdk-visually-hidden">
+                    Example with a home icon with overlaid badge showing the number 15
+                </span>
+            </div> -->
             <button mat-button class="nav-icon" [routerLink]="['/cart']">
                 <div style="display: flex; flex-direction: column;">
-                    <img src="../../../assets/cart.svg" alt="" height="30px" width="30px">
+                    <mat-icon svgIcon="cart" style="height:30px; width : 30px;" matBadge="{{cartNo}}"></mat-icon>
+                    <!-- <img src="../../../assets/cart.svg" alt="" height="30px" width="30px" matBadge="15"> -->
                     <span>Cart</span>
                 </div>
             </button>
         </div>
     </mat-toolbar>
+</div>
+<div>
     <div *ngIf="showdialog" class="dialog-box">
-        <div style=" position: absolute; width: 81px; height: 10px; border-radius: 3px; background: #FFFFFF 0% 0% no-repeat padding-box; top: 56px;
-left: 990px; z-index: 10;"></div>
+        <div style=" width: 81px; height: 10px; border-radius: 3px; background: #FFFFFF 0% 0% no-repeat padding-box; top: 56px;left: 80%;"></div>
         <div *ngIf="isLoggedIn" class="dialog-authenticated">
             <p>Hello Poonam,</p>
             <div class="profile" (click)="openProfile()">
@@ -45,6 +55,7 @@ left: 990px; z-index: 10;"></div>
                 <p>My Wishlist</p>
             </div>
             <button mat-button (click)="logout()">Logout</button>
+            <br>
         </div>
         <div *ngIf="!isLoggedIn"  class="dialog-not-authenticated">
             <div class="welcome-login-signup">
@@ -61,5 +72,6 @@ left: 990px; z-index: 10;"></div>
                 <p>My Wishlist</p>
             </div>
         </div>
+
     </div>
 </div>

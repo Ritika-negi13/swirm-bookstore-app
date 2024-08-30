@@ -1,4 +1,6 @@
 .sort {
+    display: flex;
+    justify-content: space-between;
     text-align: end !important;
     margin-right: 12%;
     margin-top: 2%;
@@ -31,10 +33,10 @@
         width: 30%;
     }
     .pagination{
-        margin-left: 26% !important;
+        margin-left: 32% !important;
     }
     .sort{
-        margin-right: 14%;
+        margin-right: 20%;
     }
 }
 @media screen and (max-width : 524px) {
@@ -42,7 +44,7 @@
         width: 45%;
     }
     .pagination{
-        margin-left: 16% !important;
+        margin-left: 25% !important;
     }
     .sort{
         margin-right: 15%;

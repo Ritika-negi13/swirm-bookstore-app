@@ -1,4 +1,8 @@
+
 <div class="sort">
+    <div style="margin-left: 12%; margin-top: 2%;">
+        <h3 style="font-weight: 600; font-size: large;">Books  <span style="font-size: 13px; color: #8c8181; font-weight: 400;">({{paginationBook.length}} items)</span> </h3>
+    </div>
     <mat-form-field appearance="outline">
         <mat-label>Sort by relevance</mat-label>
         <mat-select (selectionChange)="filter($event.value)">
@@ -35,12 +39,13 @@
             </div>
         </div>
     </div>
-    <!-- pagination  -->
-    <div class="pagination">
-        <button (click)="previousPage()" [disabled]="currentPageno === 1" class="navinagtionBtn"> < </button>
-        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 1}">1</span>
-        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 2}">2</span>
-        <span class="page" [ngClass]="{'SelectedPage': currentPageno === 3}">3</span>
-        <button (click)="nextPage()" [disabled]="currentPageno === totalPage" class="navinagtionBtn"> > </button>
-    </div>
+    
+</div>
+<!-- pagination  -->
+<div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPageno === 1" class="navinagtionBtn"> < </button>
+    <span class="page" [ngClass]="{'SelectedPage': currentPageno === 1}">1</span>
+    <span class="page" [ngClass]="{'SelectedPage': currentPageno === 2}">2</span>
+    <span class="page" [ngClass]="{'SelectedPage': currentPageno === 3}">3</span>
+    <button (click)="nextPage()" [disabled]="currentPageno === totalPage" class="navinagtionBtn"> > </button>
 </div>
