@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { window } from 'rxjs';
 import { BookService } from 'src/app/service/book/book.service';
 import { BookdataService } from 'src/app/service/bookdata/bookdata.service';
 import { CartService } from 'src/app/service/cart/cart.service';

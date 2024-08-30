@@ -1,5 +1,8 @@
 ::ng-deep .navbar{
     background-color: #A03037 !important;
+    position: fixed;
+    z-index: 10;
+    top:0px;
 }
 .example-spacer {
     flex: 1 1 auto;
@@ -83,7 +86,7 @@
     color: #FFFFFF;
     text-transform: capitalize;
     opacity: 1;
-    margin-right: 10%;
+    margin-left:7%;
 }
 
 
