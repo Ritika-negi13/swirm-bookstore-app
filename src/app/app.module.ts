@@ -28,6 +28,7 @@ import { OrderPlacedComponent } from './components/order-placed/order-placed.com
 import { ProfileComponent } from './components/profile/profile.component'; // Add this line
 import { RouterModule } from '@angular/router'; // Correct import
 import { SearchPipe } from './service/search.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { SearchPipe } from './service/search.pipe';
     BookcardComponent,
     OrderPlacedComponent,
     ProfileComponent, // Add this line
-    SearchPipe
+    SearchPipe, FooterComponent
   ],
   imports: [
     BrowserModule,

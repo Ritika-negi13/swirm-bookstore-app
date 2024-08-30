@@ -1,0 +1,51 @@
+
+
+ footer {
+  background-color: black;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px; 
+  line-height: 30px; 
+  color:white;
+  padding: 0.25rem; 
+  display: flex;
+
+  font-size: 0.875rem; 
+
+  align-items: center; 
+  justify-content: flex-start; 
+  padding-left: 5rem; 
+  font-size: 0.875rem; 
+}
+
+
+
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.content {
+  min-height: calc(100vh - 40px); 
+  padding-bottom: 30px; 
+  text-align: left;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px; 
+}
+
+
+  
+  
+    
+  
