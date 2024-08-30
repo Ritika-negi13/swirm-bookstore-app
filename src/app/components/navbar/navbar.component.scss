@@ -13,6 +13,29 @@
     padding-top: 0px;
     margin-top: 6px;
 }
+@media screen and (max-width : 500px) {
+    #bookstore{
+        display: none;
+    }
+    .logo{
+        margin-left: 1%;
+    }
+    .search{
+        width: 100%;
+    }
+    .search input{
+        width:100%;
+    }
+    .nav-btn {
+        //border: 1px solid red;
+        font: normal normal normal 16px/20px Roboto;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        opacity: 1;
+        margin-right: 4%;
+    }
+}
 .logo {
     font: normal normal normal 20px/26px Roboto;
     letter-spacing: 0px;
@@ -25,7 +48,7 @@
 
 .search {
     //left: 334px;
-    width: 40%;
+    width: 50%;
     height: 33px;
     background: #FCFCFC 0% 0% no-repeat padding-box;
     margin-left: 3%;

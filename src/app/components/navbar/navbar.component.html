@@ -1,17 +1,12 @@
 <div>
     <mat-toolbar class="navbar">
         <div class="logo" [routerLink]="['']" style="cursor: pointer;">
-            <div style="padding-right: 7px;"><img src="../../../assets/logo.svg" alt="i"></div>
-            <span>Bookstore</span>
+            <div style="padding-right: 5%;"><img src="../../../assets/logo.svg" alt="i"></div>
+            <span id="bookstore">Bookstore</span>
         </div>
         <div class="search">
             <div><mat-icon class="src-icon">search</mat-icon></div>
             <input type="text" placeholder="Search" name="search" [(ngModel)]="search" (keyup)="onSearch()">
-        </div>
-        <span class="example-spacer"></span>
-        <div class="nav-btn">
-            <button mat-button class="nav-icon" (click)="openProfile()">
-            </button>
         </div>
         <div class="nav-btn" >
             <button mat-button class="nav-icon" (click)="toggle()">
@@ -20,13 +15,6 @@
                     <span>Profile</span>
                 </div>
             </button>
-            <!-- <div class="demo-section">
-                <mat-icon matBadge="14">home</mat-icon> -->
-                <!-- Include text description of the icon's meaning for screen-readers -->
-                <!-- <span class="cdk-visually-hidden">
-                    Example with a home icon with overlaid badge showing the number 15
-                </span>
-            </div> -->
             <button mat-button class="nav-icon" [routerLink]="['/cart']">
                 <div style="display: flex; flex-direction: column;" (click)="cart()">
                     <mat-icon svgIcon="cart" style="height:30px; width : 30px;" matBadge="{{cartNo}}"></mat-icon>
