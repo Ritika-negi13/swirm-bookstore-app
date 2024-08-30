@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { BookService } from 'src/app/service/book/book.service';
 import { BookdataService } from 'src/app/service/bookdata/bookdata.service';
 import { CartService } from 'src/app/service/cart/cart.service';
 import { FeedbackService } from 'src/app/service/feedback/feedback.service';
@@ -14,27 +16,30 @@ export class BookDetailsComponent {
   bookId!:any;
   book : any;
   feedbacks:any=[];
+  bookImg!:any;
+  mayrender:boolean=false;
   stars=[false,false,false,false,false];
   comment:string='';
-  constructor(private bookdata : BookdataService, private feedbackService:FeedbackService,
+  constructor(private bookService:BookService, private bookdata : BookdataService, private feedbackService:FeedbackService,
     private wishlistService:WishlistService, private router:Router, private cartService:CartService
   ){}
 
   ngOnInit(){
-    this.bookdata.bookId.subscribe((id)=>{
-      this.bookId=id;
-      console.log(id);
-    })
-    this.bookdata.booksData.subscribe((book)=>{
-      this.book=[];
-      this.book = book.filter((b:any)=>{
-        if(b._id === this.bookId){
-          return b;
+    this.bookImg= ["../../../assets/Image 8@2x.png", "../../../assets/Image 7@2x.png", "../../../assets/Image 11@2x.png", "../../../assets/Image 12@2x.png", "../../../assets/Image 36@2x.png"];
+    this.bookId=localStorage.getItem("bookId");
+    console.log(this.bookId);
+    this.bookService.getBooks().subscribe({
+      next:(res:any)=>{
+        for(let i of res.result){
+          if(i._id===this.bookId) this.book=i;
         }
-      })
-      console.log(this.book);
+        this.book.bookImage=this.bookdata.getBookImg();
+        console.log(this.book);
+        this.mayrender=true;
+      },
+      error:(err)=>console.log(err)
     })
-
+   
     this.feedbackService.getFeedbacks('/get/feedback',this.bookId).subscribe({
       next:(res:any)=>{
         this.feedbacks=res.result;
@@ -94,11 +99,13 @@ export class BookDetailsComponent {
         if(res.message=='Product item is already added, increase the item count'){
           console.log("Product item is already added, increase the item count");
         }
-        else this.router.navigate(['/myorder'])
+        else this.router.navigate(['/cart'])
       },
-      error:(err)=>console.log(err),
+      error:(err:any)=>console.log(err),
       complete:()=>{}
     })
   }
+
+
 
 }

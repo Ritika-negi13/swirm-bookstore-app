@@ -10,6 +10,7 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,16 +19,22 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
+import { LoginsignupComponent } from './components/loginsignup/loginsignup.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
-import { FormsModule } from '@angular/forms';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { WishlistComponent } from './components/wishlist/wishlist.component';
-import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
+
 import { BookcardComponent } from './components/bookcard/bookcard.component';
+
 import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
-import { ProfileComponent } from './components/profile/profile.component'; // Add this line
-import { RouterModule } from '@angular/router'; // Correct import
-import { SearchPipe } from './service/search.pipe';
+import { RouterModule } from '@angular/router';
+
+import { ProfileComponent } from './components/profile/profile.component';
+import { SearchPipe } from './pipe/search.pipe';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
@@ -35,15 +42,19 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     BookDetailsComponent,
     DashboardComponent,
+    FooterComponent,
     MycartComponent,
     NavbarComponent,
-    MyorderComponent,
-    WishlistComponent,
     PleaseloginComponent,
+    LoginsignupComponent,
+    MyorderComponent,
+    PleaseloginComponent,
+    BreadcrumbComponent,
+    WishlistComponent,
     BookcardComponent,
+    ProfileComponent,
+    SearchPipe,
     OrderPlacedComponent,
-    ProfileComponent, // Add this line
-    SearchPipe, FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -55,14 +66,13 @@ import { FooterComponent } from './components/footer/footer.component';
     MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
-    MaterialModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    RouterModule, // Correct import
+    RouterModule,
     FormsModule,
     MatCardModule,
     MatGridListModule,
-    MatDividerModule
+    MatDividerModule,
+    ReactiveFormsModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

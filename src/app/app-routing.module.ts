@@ -13,12 +13,13 @@ import { OrderPlacedComponent } from './components/order-placed/order-placed.com
 import { LoginsignupComponent } from './components/loginsignup/loginsignup.component';
 
 
+// src/app/app-routing.module.ts
 const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
     children: [
-      { path: "", component: BookcardComponent },
+      { path: '', component: BookcardComponent },
       {
         path: 'bookDetails',
         component: BookDetailsComponent,
@@ -29,19 +30,19 @@ const routes: Routes = [
       },
       {
         path: 'pleaselogin',
-        component: PleaseloginComponent
+        component: PleaseloginComponent,
       },
       {
-        path:'orderplaced',
-        component:OrderPlacedComponent
+        path: 'orderplaced',
+        component: OrderPlacedComponent,
       },
       { path: 'wishlist', component: WishlistComponent },
       { path: 'cart', component: MycartComponent },
-      {path : 'bookdetail', component : BookDetailsComponent},
-      {path : 'myorder', component : MyorderComponent},
-    ]
+      { path: 'bookdetail', component: BookDetailsComponent },
+      { path: 'myorder', component: MyorderComponent },
+    ],
   },
-  {path:'loginsignup',component:LoginsignupComponent}
+  { path: 'loginsignup', component: LoginsignupComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -13,6 +13,15 @@ export class MyorderComponent {
     constructor(private bookService:BookService) {}
 
     ngOnInit() {
+        // this.bookService.getOrderBooks('/get/order').subscribe( {
+        //     next: (res:any) => {
+        //         this.orderBooks = res.result;
+        //         console.log(this.orderBooks);
+        //     },
+        //     error: (error: any) => {
+        //         console.log(error);
+        //     }
+        // });
         this.bookService.getOrderBooks('/admin/get/order').subscribe( {
             next: (res:any) => {
                 this.orderBooks = res.result;

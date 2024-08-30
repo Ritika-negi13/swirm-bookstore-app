@@ -21,7 +21,12 @@ export class BookcardComponent {
   itemsPerPage: number = 12;
   totalPage: any;
 
+  search!:any;
+
   ngOnInit(): void {
+    this.bookdata.search.subscribe((val)=>{
+      this.search=val;
+    })
     this.bookdata.getBook();
     // this.books = this.bookdata.booksData;
     this.bookdata.booksData.subscribe((book) => {
