@@ -34,6 +34,7 @@ export class LoginsignupComponent {
     console.log({email,password})
     this.http.userlogin('/login',{email,password}).subscribe({
       next:(res : any)=>{
+      localStorage.setItem("username",this.loginForm.get('email')?.value);
       localStorage.setItem("acesstoken",res.result.accessToken);
       this.router.navigate(['']);
     },

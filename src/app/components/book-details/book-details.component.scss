@@ -43,15 +43,18 @@
 
     .large-image-div {
         margin-left: 0.1%;
-        mat-icon{
-            @media (max-width:524px){
+
+        mat-icon {
+            @media (max-width:524px) {
                 margin-top: 8%;
             }
         }
+
         .large-image {
-            @media (max-width:524px){
+            @media (max-width:524px) {
                 margin-left: 5%;
             }
+
             height: 413px;
             width: 361px;
             border: 1px solid #D1D1D1;
@@ -69,7 +72,7 @@
             margin-top: 5%;
 
             @media(max-width:524px) {
-                justify-content:start;
+                justify-content: start;
                 width: 100%;
                 margin-left: 7%;
             }
@@ -106,7 +109,8 @@
     margin-left: 5%;
     margin-right: 10%;
     height: auto;
-    @media (max-width:524px){
+
+    @media (max-width:524px) {
         margin-top: 2%;
     }
 
@@ -120,9 +124,10 @@
     align-items: center;
 
     .rating {
-        @media (max-width:524px){
+        @media (max-width:524px) {
             width: 15%;
         }
+
         display: flex;
         align-items: center;
         background-color: #388E3C;
@@ -181,7 +186,8 @@
         margin-left: 81.5%;
         margin-top: 1%;
         margin-bottom: 2%;
-        @media (max-width:524px){
+
+        @media (max-width:524px) {
             margin-left: 70%;
         }
     }
@@ -203,9 +209,10 @@
     }
 
     textarea {
-        @media (max-width:524px){
+        @media (max-width:524px) {
             width: 85%;
         }
+
         background: #FFFFFF 0% 0% no-repeat padding-box;
         color: #707070;
         resize: none;
@@ -275,4 +282,57 @@
 
 .scrollable-div::-webkit-scrollbar {
     display: none;
+}
+
+
+custom-snackbar {
+    .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+        background-color: white !important;
+        /* Set background color to white */
+        color: black !important;
+        /* Set text color to black */
+        border-radius: 8px !important;
+    }
+
+    .mat-mdc-button.mat-mdc-snack-bar-action {
+        color: black !important;
+        /* Set button text color to black */
+    }
+}
+
+
+.snackbar-success {
+    .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+      background-color: white !important; /* Set background color to white */
+      color: black !important; /* Set text color to black */
+      border-radius: 8px !important;
+    }
+  
+    .mat-mdc-button.mat-mdc-snack-bar-action {
+      color: black !important; /* Set button text color to black */
+    }
+  }
+  
+
+.snackbar-error {
+    .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+        background-color: white !important;
+        /* Set background color to white */
+        color: black !important;
+        /* Set text color to black */
+        border-radius: 8px !important;
+    }
+
+    .mat-mdc-button.mat-mdc-snack-bar-action {
+        color: black !important;
+        /* Set button text color to black */
+    }
+
+    .mdc-snackbar__surface {
+        background-color: red !important;
+    }
+
+    .mdc-snackbar__label {
+        color: white !important;
+    }
 }
