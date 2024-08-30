@@ -97,4 +97,7 @@ export class NavbarComponent {
   onSearch(){
     this.bookdata.updateSearch(this.search); 
   }
+  cart(){
+    this.showdialog = false;
+  }
 };
