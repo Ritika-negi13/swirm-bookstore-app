@@ -20,9 +20,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
-import { LoginsignupComponent } from './components/loginsignup/loginsignup.component'; 
+import { LoginsignupComponent } from './components/loginsignup/loginsignup.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
-import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component'; 
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -30,19 +30,19 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 
-
 import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
 import { RouterModule } from '@angular/router';
 
-
 import { ProfileComponent } from './components/profile/profile.component';
 import { SearchPipe } from './pipe/search.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookDetailsComponent,
     DashboardComponent,
+    FooterComponent,
     MycartComponent,
     NavbarComponent,
     PleaseloginComponent,
@@ -51,8 +51,10 @@ import { SearchPipe } from './pipe/search.pipe';
     PleaseloginComponent,
     BreadcrumbComponent,
     WishlistComponent,
-    BookcardComponent,ProfileComponent, SearchPipe,
-    OrderPlacedComponent
+    BookcardComponent,
+    ProfileComponent,
+    SearchPipe,
+    OrderPlacedComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,7 @@ import { SearchPipe } from './pipe/search.pipe';
     MatGridListModule,
     MatDividerModule,
     ReactiveFormsModule,
-    MatBadgeModule
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
