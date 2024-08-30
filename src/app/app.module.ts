@@ -25,7 +25,8 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { PleaseloginComponent } from './components/pleaselogin/pleaselogin.component';
 import { BookcardComponent } from './components/bookcard/bookcard.component';
 import { OrderPlacedComponent } from './components/order-placed/order-placed.component';
-import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router'; // Correct import
+import { SearchPipe } from './service/search.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { Router } from '@angular/router';
     WishlistComponent,
     PleaseloginComponent,
     BookcardComponent,
-    OrderPlacedComponent
+    OrderPlacedComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,7 @@ import { Router } from '@angular/router';
     MaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    Router,
+    RouterModule, // Correct import
     FormsModule,
     MatCardModule,
     MatGridListModule,
