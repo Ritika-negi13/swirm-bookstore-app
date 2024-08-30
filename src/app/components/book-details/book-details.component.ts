@@ -79,17 +79,23 @@ export class BookDetailsComponent {
   }
 
   addToWishlist = () => {
-    this.wishlistService.addToWishlist('/add_wish_list', this.bookId).subscribe({
-      next: (res: any) => {
-        console.log(res);
-        if (res.message == 'Product item is already in wish list') {
-          console.log("product is already in list");
-        }
-        else this.router.navigate(['/wishlist']);
-      },
-      error: (err) => console.log(err),
-      complete: () => { }
-    })
+    if (localStorage.getItem("acesstoken")) {
+
+      this.wishlistService.addToWishlist('/add_wish_list', this.bookId).subscribe({
+        next: (res: any) => {
+          console.log(res);
+          if (res.message == 'Product item is already in wish list') {
+            console.log("product is already in list");
+          }
+          else this.router.navigate(['/wishlist']);
+        },
+        error: (err) => console.log(err),
+        complete: () => { }
+      })
+    }
+    else {
+      this.router.navigate(['/pleaselogin']);
+    }
   }
 
   addToCart = () => {
