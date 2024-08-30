@@ -1,4 +1,7 @@
-<app-breadcrumb></app-breadcrumb>
+<div style="margin-top: 15px; margin-left: 8%;">
+    <span routerLink="" style="color: #8c8181; cursor: pointer;">Home / </span><span
+        style="color: black;">My wishlist</span>
+</div>
 <div class="wishlist">
     <div class="my-wishlist">
         <p>My Wishlist</p>
@@ -15,7 +18,7 @@
                     <p class="card-discount"><s>Rs. {{i.product_id.discountPrice}}</s></p>
                 </div>
             </div>
-            <mat-icon>delete_outline</mat-icon>
+            <mat-icon (click)="deleteFromWishlist(i.product_id._id)" >delete_outline</mat-icon>
         </div>
     </div>
 </div>

@@ -1,13 +1,17 @@
-.sort{
+.sort {
+    display: flex;
+    justify-content: space-between;
     text-align: end !important;
     margin-right: 12%;
     margin-top: 2%;
 }
-::ng-deep .mdc-text-field--filled{
+
+::ng-deep .mdc-text-field--filled {
     border: 1px solid #E2E2E2 !important;
     border-radius: 3px;
     background-color: #ffffff !important;
 }
+
 .bookcard {
     display: flex;
     flex-wrap: wrap;
@@ -24,7 +28,29 @@
     border-radius: 3px;
     opacity: 1;
 }
-.book:hover{
+@media screen and (max-width : 715px) {
+    .book{
+        width: 30%;
+    }
+    .pagination{
+        margin-left: 26% !important;
+    }
+    .sort{
+        margin-right: 14%;
+    }
+}
+@media screen and (max-width : 524px) {
+    .book{
+        width: 45%;
+    }
+    .pagination{
+        margin-left: 16% !important;
+    }
+    .sort{
+        margin-right: 15%;
+    }
+}
+.book:hover {
     box-shadow: 2px 2px 2px 2px #E2E2E2;
 }
 
@@ -93,7 +119,7 @@ img {
 
 .outofstock {
     z-index: 10;
-    position:absolute;
+    position: absolute;
     top: 70%;
     left: 5%;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -107,4 +133,41 @@ img {
     margin-left: 3%;
     width: 53%;
     font-weight: bolder;
+}
+
+//pagination
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+}
+
+.navinagtionBtn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    opacity: 1;
+}
+
+.page {
+    font: normal normal medium 10px/13px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    margin-right: 10px;
+    margin-left: 10px;
+    //border: 1px solid red;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.SelectedPage {
+    background-color: #A03037;
+    color: white;
+
 }

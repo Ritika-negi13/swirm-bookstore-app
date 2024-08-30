@@ -1,4 +1,7 @@
-<app-breadcrumb></app-breadcrumb>
+<div style="margin-top: 15px; margin-left: 8%;">
+    <span routerLink="" style="color: #E2E2E2; cursor: pointer;">Home / </span><span
+        style="color: black;">My order</span>
+</div>
 <div class="orders" *ngFor="let book of orderBooks">
     <mat-card class="card">
         <div class="order">
@@ -7,11 +10,11 @@
                     <img src="../../../assets/Image 11.png" alt="">
                 </div>
                 <div>
-                    <p class="name" >{{book.bookName}}
+                    <p class="name" >{{book.product_name}}
                     </p>
-                    <p class="author">by {{book.author}}</p>
-                    <p class="disprice">Rs. {{book.discountPrice}} <span
-                          class="price"><s>Rs. {{book.price}}</s></span></p>
+                    <p class="author">by Ishu Gupta {{book.author}}</p>
+                    <p class="disprice">Rs. {{book.product_price / 2}} <span
+                          class="price"><s>Rs. {{book.product_price}}</s></span></p>
                 </div>
             </div>
             <div class="order-place">
